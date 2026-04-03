@@ -690,8 +690,3 @@ a:focus-visible {
 @media (max-width: 767px) {
   .sm-block { display: block; }
 }
-
-
-#News li {
-  list-style: none;
-}

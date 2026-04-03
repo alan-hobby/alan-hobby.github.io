@@ -195,12 +195,6 @@
   line-height: var(--line-height-tight);
 }
 
-.edu-period {
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-normal);
-  color: var(--color-text-secondary);
-}
-
 /* RESEARCH EXPERIENCE ITEMS */
 .experience-item {
   display: flex;
@@ -276,10 +270,17 @@
 
 /* Academic Services Grid - Full width layout */
 .services-grid {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: var(--spacing-lg);
   width: 100%;
+}
+
+@media (min-width: 768px) {
+  .services-grid {
+    grid-template-columns: minmax(300px, 1fr) minmax(600px, 2fr);
+    gap: var(--spacing-xl);
+  }
 }
 
 .service-column {
