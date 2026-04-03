@@ -1,6 +1,6 @@
 {
   "novels": [
-    { "id": "novel_001", "title": "神的游戏", "category": "麻耶雄嵩", "image": /images/novels/神的游戏.jpg", "links": {"epub": "/files/神的游戏.epub" }},
+    { "id": "novel_001", "title": "神的游戏", "category": "麻耶雄嵩", "image": "/images/novels/神的游戏.jpg", "links": {"epub": "/files/神的游戏.epub" }},
       {"id": "novel_002", "title": "爱的成人式", "category": "乾 くるみ", "image": "/images/novels/爱的成人式.jpg", "links": {"epub": "/files/爱的成人式.epub"}}
   ],
   "models": [
