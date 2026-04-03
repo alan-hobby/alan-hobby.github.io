@@ -527,17 +527,17 @@
 
 /* Ultra-compact publications */
 .year-group .publication + .publication {
-  margin-top: 0.125rem;
+  margin-top: 0;
 }
 
 /* On mobile, even more compact */
 @media (max-width: 767px) {
   .year-group .publication + .publication {
-    margin-top: 0.0625rem;
+    margin-top: 0;
   }
   
   .publication {
-    padding: 0.03125rem 0;
+    padding: 0.0625rem 0;
   }
 }
 
