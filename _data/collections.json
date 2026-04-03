@@ -25,11 +25,12 @@
     { "id": "novel_023", "title": "只有两个人的世界", "category": "森博嗣", "image": "novels/只有两个人的世界.jpg", "links": {"epub": "/files/只有两个人的世界.epub", "analysis": "./_posts/novels/只有两个人的世界.html"}},
     { "id": "novel_024", "title": "密室狂乱时代的孤岛事件", "category": "鸭崎暖护", "image": "novels/密室狂乱时代的孤岛事件.jpg", "links": {"epub": "/files/密室狂乱时代的孤岛事件.epub", "analysis": "./_posts/novels/密室狂乱时代的孤岛事件.html"}},
     { "id": "novel_025", "title": "玻璃之锤", "category": "贵志祐介", "image": "novels/玻璃之锤.jpg", "links": {"epub": "/files/玻璃之锤.epub", "analysis": "./_posts/novels/玻璃之锤.html"}},
-    { "id": "novel_025", "title": "凛冬之棺", "category": "孙沁文", "image": "novels/凛冬之棺.jpg", "links": {"epub": "/files/凛冬之棺.epub", "analysis": "./_posts/novels/凛冬之棺.html"}},
-    { "id": "novel_025", "title": "紧闭的门扉", "category": "石持浅海", "image": "novels/紧闭的门扉.jpg", "links": {"epub": "/files/紧闭的门扉.epub", "analysis": "./_posts/novels/紧闭的门扉.html"}},
-    { "id": "novel_025", "title": "岛田流杀人事件", "category": "御手洗熊猫", "image": "novels/岛田流杀人事件.jpg", "links": {"epub": "/files/岛田流杀人事件.epub", "analysis": "./_posts/novels/岛田流杀人事件.html"}},
-    { "id": "novel_025", "title": "咚咚吊桥坠落", "category": "绫辻行人", "image": "novels/咚咚吊桥坠落.jpg", "links": {"epub": "/files/咚咚吊桥坠落.epub", "analysis": "./_posts/novels/咚咚吊桥坠落.html"}},
-    { "id": "novel_025", "title": "十角馆事件", "category": "绫辻行人", "image": "novels/十角馆事件.jpg", "links": {"epub": "/files/十角馆事件.epub", "analysis": "./_posts/novels/十角馆事件.html"}}
+    { "id": "novel_026", "title": "凛冬之棺", "category": "孙沁文", "image": "novels/凛冬之棺.jpg", "links": {"epub": "/files/凛冬之棺.epub", "analysis": "./_posts/novels/凛冬之棺.html"}},
+    { "id": "novel_027", "title": "紧闭的门扉", "category": "石持浅海", "image": "novels/紧闭的门扉.jpg", "links": {"epub": "/files/紧闭的门扉.epub", "analysis": "./_posts/novels/紧闭的门扉.html"}},
+    { "id": "novel_028", "title": "岛田流杀人事件", "category": "御手洗熊猫", "image": "novels/岛田流杀人事件.jpg", "links": {"epub": "/files/岛田流杀人事件.epub", "analysis": "./_posts/novels/岛田流杀人事件.html"}},
+    { "id": "novel_029", "title": "咚咚吊桥坠落", "category": "绫辻行人", "image": "novels/咚咚吊桥坠落.jpg", "links": {"epub": "/files/咚咚吊桥坠落.epub", "analysis": "./_posts/novels/咚咚吊桥坠落.html"}},
+    { "id": "novel_030", "title": "十角馆事件", "category": "绫辻行人", "image": "novels/十角馆事件.jpg", "links": {"epub": "/files/十角馆事件.epub", "analysis": "./_posts/novels/十角馆事件.html"}},
+    { "id": "novel_031", "title": "杀死女孩的100种方式", "category": "白井智之", "image": "novels/杀死女孩的100种方式.jpg", "links": {"epub": "/files/杀死女孩的100种方式.epub", "analysis": "./_posts/novels/杀死女孩的100种方式.html"}}
   ],
   "models": [
     { "id": "model_001", "title": "AE86 Trueno", "category": "Toyota", "subtitle": "1:18 Scale", "image": "model_001.jpg", "links": {"page": "#"}},
