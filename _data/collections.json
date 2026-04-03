@@ -143,8 +143,35 @@
     { "id": "movie_045", "title": "血观音", "category": "Christopher Nolan", "image": "movies/血观音.jpg"}
   ],
   "tvshows": [
-    { "id": "tv_001", "title": "Breaking Bad", "subtitle": "2008–2013 · 5 Seasons", "image": "tv_001.jpg" },
-    { "id": "tv_002", "title": "Dark", "subtitle": "2017–2020 · 3 Seasons", "image": "tv_002.jpg" },
-    { "id": "tv_003", "title": "Sherlock", "subtitle": "2010–2017 · 4 Seasons", "image": "tv_003.jpg" }
+    { "id": "tv_001", "title": "生活大爆炸第一季", "image": "tvs/生活大爆炸第一季.jpg" },
+    { "id": "tv_001", "title": "生活大爆炸第二季", "image": "tvs/生活大爆炸第二季.jpg" },
+    { "id": "tv_001", "title": "生活大爆炸第三季", "image": "tvs/生活大爆炸第三季.jpg" },
+    { "id": "tv_001", "title": "生活大爆炸第四季", "image": "tvs/生活大爆炸第四季.jpg" },
+    { "id": "tv_001", "title": "生活大爆炸第五季", "image": "tvs/生活大爆炸第五季.jpg" },
+    { "id": "tv_001", "title": "生活大爆炸第六季", "image": "tvs/生活大爆炸第六季.jpg" },
+    { "id": "tv_001", "title": "生活大爆炸第七季", "image": "tvs/生活大爆炸第七季.jpg" },
+    { "id": "tv_001", "title": "生活大爆炸第八季", "image": "tvs/生活大爆炸第八季.jpg" },
+    { "id": "tv_001", "title": "生活大爆炸第九季", "image": "tvs/生活大爆炸第九季.jpg" },
+    { "id": "tv_001", "title": "生活大爆炸第十季", "image": "tvs/生活大爆炸第十季.jpg" },
+    { "id": "tv_001", "title": "生活大爆炸第十一季", "image": "tvs/生活大爆炸第十一季.jpg" },
+    { "id": "tv_001", "title": "生活大爆炸第十二季", "image": "tvs/生活大爆炸第十二季.jpg" },
+    { "id": "tv_001", "title": "越狱第一季", "image": "tvs/越狱第一季.jpg" },
+    { "id": "tv_001", "title": "越狱第二季", "image": "tvs/越狱第二季.jpg" },
+    { "id": "tv_001", "title": "越狱第三季", "image": "tvs/越狱第三季.jpg" },
+    { "id": "tv_001", "title": "越狱第四季", "image": "tvs/越狱第四季.jpg" },
+    { "id": "tv_001", "title": "爱，死亡和机器人第一季", "image": "tvs/爱，死亡和机器人第一季.jpg" },
+    { "id": "tv_001", "title": "爱，死亡和机器人第二季", "image": "tvs/爱，死亡和机器人第二季.jpg" },
+    { "id": "tv_001", "title": "爱，死亡和机器人第三季", "image": "tvs/爱，死亡和机器人第三季.jpg" },
+    { "id": "tv_001", "title": "黑镜第一季", "image": "tvs/黑镜第一季.jpg" },
+    { "id": "tv_001", "title": "黑镜第二季", "image": "tvs/黑镜第二季.jpg" },
+    { "id": "tv_001", "title": "黑镜第三季", "image": "tvs/黑镜第三季.jpg" },
+    { "id": "tv_001", "title": "黑镜第四季", "image": "tvs/黑镜第四季.jpg" },,
+    { "id": "tv_001", "title": "黑镜第五季", "image": "tvs/黑镜第五季.jpg" },
+    { "id": "tv_001", "title": "黑镜第六季", "image": "tvs/黑镜第六季.jpg" },
+    { "id": "tv_001", "title": "黑镜第七季", "image": "tvs/黑镜第七季.jpg" },
+    { "id": "tv_001", "title": "男人帮", "image": "tvs/男人帮.jpg" },
+    { "id": "tv_001", "title": "匆匆那年", "image": "tvs/匆匆那年.jpg" },
+    { "id": "tv_001", "title": "潜伏", "image": "tvs/潜伏.jpg" },
+    { "id": "tv_001", "title": "大明王朝1566", "image": "tvs/大明王朝1566.jpg" }
   ]
 }
