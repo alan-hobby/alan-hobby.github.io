@@ -7,7 +7,8 @@ export const DATA_PATHS = {
   collaborators: './_data/collaborators.json',
   venues: './_data/venues.json',
   services: './_data/services.json',
-  researchExperience: './_data/research-experience.json'
+  researchExperience: './_data/research-experience.json',
+  novels: './_data/novels.json'
 };
 
 export const RESOURCE_ICONS = {
