@@ -32,7 +32,7 @@ class DataLoader {
   async loadAllData() {
     try {
       const [publications, collaborators, venues, services] = await Promise.all([
-        this.fetchJSON(DATA_PATHS.publications),      // Use DATA_PATHS
+        this.fetchJSON(DATA_PATHS.publications),
         this.fetchJSON(DATA_PATHS.collaborators),
         this.fetchJSON(DATA_PATHS.venues),
         this.fetchJSON(DATA_PATHS.services).catch(() => ({ 
@@ -43,11 +43,20 @@ class DataLoader {
 
       let researchExperience;
       try {
-        const researchData = await this.fetchJSON('./_data/research-experience.json');
+        const researchData = await this.fetchJSON(DATA_PATHS.researchExperience);
         researchExperience = researchData.research_experience || [];
       } catch (error) {
         console.warn('Research experience file not found or invalid, using empty array');
         researchExperience = [];
+      }
+
+      let novels;
+      try {
+        const novelsData = await this.fetchJSON(DATA_PATHS.novels);
+        novels = novelsData.novels || [];
+      } catch (error) {
+        console.warn('Novels file not found or invalid, using empty array');
+        novels = [];
       }
 
       return {
@@ -55,7 +64,8 @@ class DataLoader {
         collaborators: collaborators.collaborators || {},
         venues: venues.venues || {},
         services: services,
-        researchExperience
+        researchExperience,
+        novels
       };
     } catch (error) {
       console.error('Error loading data files:', error);
@@ -64,7 +74,8 @@ class DataLoader {
         collaborators: {},
         venues: {},
         services: { committees: [], reviewer: [] },
-        researchExperience: []
+        researchExperience: [],
+        novels: []
       };
     }
   }
