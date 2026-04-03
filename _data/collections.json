@@ -102,7 +102,18 @@
     { "id": "movie_042", "title": "疯狂动物城2", "category": "Christopher Nolan", "image": "movies/疯狂动物城2.jpg"},
     { "id": "movie_043", "title": "蝴蝶效应", "category": "Christopher Nolan", "image": "movies/蝴蝶效应.jpg"},
     { "id": "movie_044", "title": "禁闭岛", "category": "Christopher Nolan", "image": "movies/禁闭岛.jpg"},
-    { "id": "movie_045", "title": "致命魔术", "category": "Christopher Nolan", "image": "movies/致命魔术.jpg"}
+    { "id": "movie_045", "title": "致命魔术", "category": "Christopher Nolan", "image": "movies/致命魔术.jpg"},
+    { "id": "movie_045", "title": "速度与激情1", "category": "Christopher Nolan", "image": "movies/速度与激情1.jpg"},
+    { "id": "movie_045", "title": "速度与激情2", "category": "Christopher Nolan", "image": "movies/速度与激情2.jpg"},
+    { "id": "movie_045", "title": "速度与激情3", "category": "Christopher Nolan", "image": "movies/速度与激情3.jpg"},
+    { "id": "movie_045", "title": "速度与激情4", "category": "Christopher Nolan", "image": "movies/速度与激情4.jpg"},
+    { "id": "movie_045", "title": "速度与激情5", "category": "Christopher Nolan", "image": "movies/速度与激情5.jpg"},
+    { "id": "movie_045", "title": "速度与激情6", "category": "Christopher Nolan", "image": "movies/速度与激情6.jpg"},
+    { "id": "movie_045", "title": "速度与激情7", "category": "Christopher Nolan", "image": "movies/速度与激情7.jpg"},
+    { "id": "movie_045", "title": "速度与激情8", "category": "Christopher Nolan", "image": "movies/速度与激情8.jpg"},
+    { "id": "movie_045", "title": "速度与激情9", "category": "Christopher Nolan", "image": "movies/速度与激情9.jpg"},
+    { "id": "movie_045", "title": "速度与激情10", "category": "Christopher Nolan", "image": "movies/速度与激情10.jpg"},
+    { "id": "movie_045", "title": "速度与激情特别行动", "category": "Christopher Nolan", "image": "movies/速度与激情特别行动.jpg"}
   ],
   "tvshows": [
     { "id": "tv_001", "title": "Breaking Bad", "subtitle": "2008–2013 · 5 Seasons", "image": "tv_001.jpg" },
