@@ -128,6 +128,19 @@ export class Renderer {
     `;
   }
 
+  renderNovelCover(item) {
+    const epubUrl = (item.links && item.links.epub) || '#';
+    const imageHtml = item.image
+      ? `<a href="${epubUrl}" target="_blank" rel="noopener"><img src="images/${item.image}" alt="${item.title}" title="${item.title}" class="novel-cover" loading="lazy" onerror="this.style.display='none'"></a>`
+      : '';
+
+    return `
+      <div class="novel-card" id="${item.id}">
+        ${imageHtml}
+      </div>
+    `;
+  }
+
   renderCoverOnly(item) {
     const imageHtml = item.image
       ? `<img src="images/${item.image}" alt="${item.title}" title="${item.title}" class="novel-cover" loading="lazy" onerror="this.style.display='none'">`
@@ -143,7 +156,7 @@ export class Renderer {
   renderAllNovels() {
     let html = '<div class="novel-grid">';
     this.novels.forEach(item => {
-      html += this.renderNovelCard(item);
+      html += this.renderNovelCover(item);
     });
     html += '</div>';
     return html;
