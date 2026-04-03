@@ -9,7 +9,8 @@ export class Renderer {
     this.publications = data.publications || [];
     this.collaborators = data.collaborators || {};
     this.venues = data.venues || {};
-    this.services = data.services || { teaching_assistant: [], reviewer: [] };
+    this.services = data.services || { committees: [], reviewer: [] };
+    this.novels = data.novels || [];
   }
 
   // ===== PUBLICATION RENDERING =====
@@ -79,7 +80,7 @@ export class Renderer {
       if (award.link) {
         awardHtml += `<a href="${award.link}" target="_blank" rel="noopener">${award.name}</a>`;
       } else {
-        const awardFile = `/files/${id}_award.pdf`;
+        const awardFile = `./files/${id}_award.pdf`;
         awardHtml += `<a href="${awardFile}" target="_blank">${award.name}</a>`;
       }
       
@@ -117,7 +118,7 @@ export class Renderer {
     
     resources.forEach(resource => {
       const filename = `${id}_${resource}.pdf`;
-      const url = `/files/${filename}`;
+      const url = `./files/${filename}`;
       resourceLinks.push(`
         <a href="${url}" class="resource-link" data-type="${resource}" target="_blank">
           <i class="fas fa-file-pdf"></i> ${resource.charAt(0).toUpperCase() + resource.slice(1)}
@@ -234,94 +235,6 @@ export class Renderer {
   }
 
   // ===== SERVICES RENDERING =====
-
-  // sortServiceItems(items) {
-  //   if (!items || !Array.isArray(items)) return [];
-    
-  //   return [...items].sort((a, b) => {
-  //     const getLargestYear = (item) => {
-  //       if (!item.years || !Array.isArray(item.years) || item.years.length === 0) return 0;
-  //       const years = item.years.map(y => parseInt(y)).filter(y => !isNaN(y));
-  //       return years.length > 0 ? Math.max(...years) : 0;
-  //     };
-      
-  //     const yearA = getLargestYear(a);
-  //     const yearB = getLargestYear(b);
-  //     return yearB - yearA;
-  //   });
-  // }
-
-  // splitIntoTwoColumns(items) {
-  //   if (!items || !Array.isArray(items)) return [[], []];
-  //   const half = Math.ceil(items.length / 2);
-  //   return [items.slice(0, half), items.slice(half)];
-  // }
-
-  // formatYears(years) {
-  //   if (!years || !Array.isArray(years) || years.length === 0) return '';
-    
-  //   const parsedYears = years
-  //     .map(y => parseInt(y))
-  //     .filter(y => !isNaN(y));
-      
-  //   if (parsedYears.length === 0) return '';
-    
-  //   const sortedYears = [...parsedYears].sort((a, b) => b - a);
-  //   return sortedYears.map(year => `'${year.toString().slice(2)}`).join(', ');
-  // }
-
-  // renderAcademicServices() {
-  //   const teaching_assistant = this.sortServiceItems(this.services.teaching_assistant || []);
-  //   const reviewer = this.sortServiceItems(this.services.reviewer || []);
-  //   const [reviewerCol1, reviewerCol2] = this.splitIntoTwoColumns(reviewer);
-
-  //   return `
-  //     <div class="services-grid">
-  //       <!-- Program teaching_assistant Column -->
-  //       <div class="service-column">
-  //         <div class="service-category">
-  //           <h3>Teaching Assistant</h3>
-  //           <div class="service-items">
-  //             ${teaching_assistant.map(item => `
-  //               <div class="service-item">
-  //                 <span class="service-lectures">${item.lectures || 'Unknown'}</span>
-  //                 <span class="service-years">${this.formatYears(item.years)}</span>
-  //                 ${item.note ? `<span class="service-note">(${item.note})</span>` : ''}
-  //               </div>
-  //             `).join('')}
-  //           </div>
-  //         </div>
-  //       </div>
-        
-  //       <!-- Reviewer Column -->
-  //       <div class="service-column">
-  //         <div class="service-category">
-  //           <h3>Reviewer</h3>
-  //           <div class="reviewer-grid">
-  //             <div class="reviewer-column">
-  //               ${reviewerCol1.map(item => `
-  //                 <div class="service-item">
-  //                   <span class="service-conference">${item.conference || 'Unknown'}</span>
-  //                   <span class="service-years">${this.formatYears(item.years)}</span>
-  //                   ${item.note ? `<span class="service-note">(${item.note})</span>` : ''}
-  //                 </div>
-  //               `).join('')}
-  //             </div>
-  //             <div class="reviewer-column">
-  //               ${reviewerCol2.map(item => `
-  //                 <div class="service-item">
-  //                   <span class="service-conference">${item.conference || 'Unknown'}</span>
-  //                   <span class="service-years">${this.formatYears(item.years)}</span>
-  //                   ${item.note ? `<span class="service-note">(${item.note})</span>` : ''}
-  //                 </div>
-  //               `).join('')}
-  //             </div>
-  //           </div>
-  //         </div>
-  //       </div>
-  //     </div>
-  //   `;
-  // }
   
   sortServiceItems(items) {
     if (!items || !Array.isArray(items)) return [];
@@ -338,13 +251,13 @@ export class Renderer {
       return yearB - yearA;
     });
   }
- 
+
   splitIntoTwoColumns(items) {
     if (!items || !Array.isArray(items)) return [[], []];
     const half = Math.ceil(items.length / 2);
     return [items.slice(0, half), items.slice(half)];
   }
- 
+
   formatYears(years) {
     if (!years || !Array.isArray(years) || years.length === 0) return '';
     
@@ -357,13 +270,13 @@ export class Renderer {
     const sortedYears = [...parsedYears].sort((a, b) => b - a);
     return sortedYears.map(year => `'${year.toString().slice(2)}`).join(', ');
   }
- 
+
   renderAcademicServices() {
     const teaching = this.sortServiceItems(this.services.teaching_assistant || []);
     const reviewer = this.sortServiceItems(this.services.reviewer || []);
- 
+
     let html = '';
- 
+
     // Teaching Assistant — each lecture on its own line
     html += `
       <div class="education-item">
@@ -376,7 +289,7 @@ export class Renderer {
         </div>
       </div>
     `;
- 
+
     // Reviewer — inline comma-separated
     html += `
       <div class="education-item">
@@ -390,11 +303,10 @@ export class Renderer {
         </div>
       </div>
     `;
- 
+
     return html;
   }
 
-  
   renderEducation() {
     const educationData = [
       {
@@ -513,5 +425,53 @@ export class Renderer {
         </div>
       `;
     }).join('');
+  }
+
+  // ===== NOVEL RENDERING =====
+
+  renderNovel(novel) {
+    return `
+      <article class="publication" id="novel-${novel.title.replace(/\s+/g, '-')}">
+        <div class="publication-content">
+          <h3 class="publication-title">${novel.title}</h3>
+          <div class="publication-venue">
+            <span class="venue-year">${novel.year || ''}</span>
+          </div>
+        </div>
+      </article>
+    `;
+  }
+
+  renderAllNovels() {
+    // Group by author, preserving order of first appearance
+    const grouped = {};
+    const authorsInOrder = [];
+
+    this.novels.forEach(novel => {
+      const author = novel.author || 'Unknown';
+      if (!grouped[author]) {
+        grouped[author] = [];
+        authorsInOrder.push(author);
+      }
+      grouped[author].push(novel);
+    });
+
+    let html = '';
+
+    authorsInOrder.forEach(author => {
+      const novels = grouped[author];
+      if (novels && novels.length > 0) {
+        html += `<div class="year-group" id="author-${author.replace(/\s+/g, '-')}">`;
+        html += `<h3 class="year-title">${author}</h3>`;
+
+        novels.forEach(novel => {
+          html += this.renderNovel(novel);
+        });
+
+        html += '</div>';
+      }
+    });
+
+    return html;
   }
 }
