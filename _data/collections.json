@@ -4,7 +4,13 @@
     { "id": "novel_002", "title": "爱的成人式", "category": "乾 くるみ", "image": "novels/爱的成人式.jpg", "links": {"epub": "/files/爱的成人式.epub", "analysis": "./_posts/novels/爱的成人式.html"}},
     { "id": "novel_003", "title": "夏与冬的奏鸣曲", "category": "麻耶雄嵩", "image": "novels/夏与冬的奏鸣曲.jpg", "links": {"epub": "/files/夏与冬的奏鸣曲.epub", "analysis": "./_posts/novels/夏与冬的奏鸣曲.html"}},
     { "id": "novel_004", "title": "〇〇〇〇〇〇〇〇杀人事件", "category": "早坂吝", "image": "novels/八圈杀人事件.jpg", "links": {"epub": "/files/八圈杀人事件.epub", "analysis": "./_posts/novels/八圈杀人事件.html"}},
-    { "id": "novel_005", "title": "独眼少女", "category": "麻耶雄嵩", "image": "novels/独眼少女.jpg", "links": {"epub": "/files/独眼少女.epub", "analysis": "./_posts/novels/独眼少女.html"}}
+    { "id": "novel_005", "title": "独眼少女", "category": "麻耶雄嵩", "image": "novels/独眼少女.jpg", "links": {"epub": "/files/独眼少女.epub", "analysis": "./_posts/novels/独眼少女.html"}},
+    { "id": "novel_006", "title": "火蛾", "category": "古泉迦十", "image": "novels/火蛾.jpg", "links": {"epub": "/files/火蛾.epub", "analysis": "./_posts/novels/火蛾.html"}},
+    { "id": "novel_007", "title": "灵媒侦探城冢翡翠", "category": "相泽纱呼", "image": "novels/灵媒侦探城冢翡翠.jpg", "links": {"epub": "/files/灵媒侦探城冢翡翠.epub", "analysis": "./_posts/novels/灵媒侦探城冢翡翠.html"}},
+    { "id": "novel_008", "title": "彩虹牙刷", "category": "早坂吝", "image": "novels/彩虹牙刷.jpg", "links": {"epub": "/files/彩虹牙刷.epub", "analysis": "./_posts/novels/彩虹牙刷.html"}},
+    { "id": "novel_009", "title": "四元馆事件", "category": "早坂吝", "image": "novels/四元馆事件.jpg", "links": {"epub": "/files/四元馆事件.epub", "analysis": "./_posts/novels/四元馆事件.html"}},
+    { "id": "novel_010", "title": "双蛇密室", "category": "早坂吝", "image": "novels/双蛇密室.jpg", "links": {"epub": "/files/双蛇密室.epub", "analysis": "./_posts/novels/双蛇密室.html"}},
+    { "id": "novel_010", "title": "爱丽丝罪恶奇境", "category": "早坂吝", "image": "novels/爱丽丝罪恶奇境.jpg", "links": {"epub": "/files/爱丽丝罪恶奇境.epub", "analysis": "./_posts/novels/爱丽丝罪恶奇境.html"}}
   ],
   "models": [
     { "id": "model_001", "title": "AE86 Trueno", "category": "Toyota", "subtitle": "1:18 Scale", "image": "model_001.jpg", "links": {"page": "#"}},
