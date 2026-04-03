@@ -141,31 +141,11 @@ export class Renderer {
   }
 
   renderAllNovels() {
-    const grouped = {};
-    const categoriesInOrder = [];
-
+    let html = '<div class="novel-grid">';
     this.novels.forEach(item => {
-      const cat = item.category || 'Other';
-      if (!grouped[cat]) {
-        grouped[cat] = [];
-        categoriesInOrder.push(cat);
-      }
-      grouped[cat].push(item);
+      html += this.renderNovelCard(item);
     });
-
-    let html = '';
-    categoriesInOrder.forEach(cat => {
-      const catItems = grouped[cat];
-      if (catItems && catItems.length > 0) {
-        html += `<div class="year-group" id="cat-${cat.replace(/\s+/g, '-')}">`;
-        html += `<h3 class="year-title">${cat}</h3>`;
-        html += `<div class="novel-grid">`;
-        catItems.forEach(item => {
-          html += this.renderNovelCard(item);
-        });
-        html += '</div></div>';
-      }
-    });
+    html += '</div>';
     return html;
   }
 
