@@ -42,6 +42,7 @@ class WebsiteApp {
     this.renderEducation();
     this.renderResearchExperience();
     this.renderAcademicServices();
+    this.renderNovels();
   }
 
   renderPublications() {
@@ -74,6 +75,17 @@ class WebsiteApp {
     if (!container || !this.renderer) return;
     
     container.innerHTML = this.renderer.renderResearchExperience(this.data.researchExperience);
+  }
+
+  renderNovels() {
+    const container = document.getElementById('novelsContainer');
+    if (!container || !this.renderer) return;
+    
+    if (this.data.novels && this.data.novels.length > 0) {
+      container.innerHTML = this.renderer.renderAllNovels();
+    } else {
+      container.innerHTML = '<p class="no-data">No novels found.</p>';
+    }
   }
 
   setupEventListeners() {
