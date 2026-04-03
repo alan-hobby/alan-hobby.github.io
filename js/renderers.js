@@ -128,6 +128,18 @@ export class Renderer {
     `;
   }
 
+  renderCoverOnly(item) {
+    const imageHtml = item.image
+      ? `<img src="images/${item.image}" alt="${item.title}" title="${item.title}" class="novel-cover" loading="lazy" onerror="this.style.display='none'">`
+      : '';
+
+    return `
+      <div class="novel-card" id="${item.id}">
+        ${imageHtml}
+      </div>
+    `;
+  }
+
   renderAllNovels() {
     const grouped = {};
     const categoriesInOrder = [];
@@ -172,7 +184,7 @@ export class Renderer {
   renderAllMovies() {
     let html = '<div class="novel-grid">';
     this.movies.forEach(item => {
-      html += this.renderNovelCard(item);
+      html += this.renderCoverOnly(item);
     });
     html += '</div>';
     return html;
@@ -183,10 +195,20 @@ export class Renderer {
   }
 
   renderAllGames() {
-    return this.renderFlat(this.games);
+    let html = '<div class="novel-grid">';
+    this.games.forEach(item => {
+      html += this.renderNovelCard(item);
+    });
+    html += '</div>';
+    return html;
   }
 
   renderAllTvshows() {
-    return this.renderFlat(this.tvshows);
+    let html = '<div class="novel-grid">';
+    this.tvshows.forEach(item => {
+      html += this.renderCoverOnly(item);
+    });
+    html += '</div>';
+    return html;
   }
 }
