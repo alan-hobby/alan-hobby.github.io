@@ -6,472 +6,141 @@ import { RESOURCE_ICONS, RESOURCE_NAMES } from './config.js';
 
 export class Renderer {
   constructor(data) {
-    this.publications = data.publications || [];
-    this.collaborators = data.collaborators || {};
-    this.venues = data.venues || {};
-    this.services = data.services || { committees: [], reviewer: [] };
     this.novels = data.novels || [];
+    this.models = data.models || [];
+    this.lego = data.lego || [];
+    this.cars = data.cars || [];
+    this.watches = data.watches || [];
+    this.games = data.games || [];
+    this.movies = data.movies || [];
+    this.tvshows = data.tvshows || [];
   }
 
-  // ===== PUBLICATION RENDERING =====
-  
-  extractYearFromId(id) {
-    const yearDigits = id.match(/^(\d{2})_/);
-    return yearDigits && yearDigits[1] ? `20${yearDigits[1]}` : 'Unknown';
+  // ===== SHARED: render a single card (publication-style) =====
+
+  renderCard(item) {
+    const linksHtml = this.formatLinks(item.links || {});
+    const imageHtml = item.image
+      ? `<div class="publication-media">
+           <img src="images/${item.image}" alt="${item.title}" class="publication-image" loading="lazy" onerror="this.style.display='none'">
+         </div>`
+      : '';
+
+    return `
+      <article class="publication" id="${item.id}">
+        <div class="publication-content">
+          <h3 class="publication-title">${item.title}</h3>
+          ${item.subtitle ? `<div class="publication-venue"><span class="venue-name">${item.subtitle}</span></div>` : ''}
+          ${linksHtml ? `<div class="publication-links">${linksHtml}</div>` : ''}
+        </div>
+        ${imageHtml}
+      </article>
+    `;
   }
 
-  extractVenueAbbrFromId(id) {
-    const parts = id.split('_');
-    return parts.length >= 2 ? parts[1] : '';
+  // ===== SHARED: render a list item (education-style) with image =====
+
+  renderListItem(item) {
+    const imageHtml = item.image
+      ? `<div class="publication-media">
+           <img src="images/${item.image}" alt="${item.title}" class="publication-image" loading="lazy" onerror="this.style.display='none'">
+         </div>`
+      : '';
+
+    return `
+      <div class="publication" id="${item.id}">
+        <div class="publication-content">
+          <div class="edu-degree">${item.title}</div>
+          ${item.subtitle ? `<div class="edu-institution">${item.subtitle}</div>` : ''}
+        </div>
+        ${imageHtml}
+      </div>
+    `;
   }
 
-  getVenueName(abbr) {
-    return this.venues[abbr] || abbr;
-  }
+  // ===== SHARED: format resource links =====
 
-  formatAuthors(authors = [], equalContributors = []) {
-    if (!authors || authors.length === 0) {
-      return '<span class="author">Unknown</span>';
-    }
+  formatLinks(links) {
+    if (!links || Object.keys(links).length === 0) return '';
 
-    return authors.map((author, index) => {
-      const collaborator = this.collaborators[author];
-      const isEqualContributor = equalContributors.includes(author);
-      const isSelf = collaborator && collaborator.self === true;
-      
-      let authorHtml = '';
-      
-      if (collaborator && collaborator.url) {
-        authorHtml = `<a href="${collaborator.url}" class="author-link" target="_blank" rel="noopener">`;
-      } else {
-        authorHtml = '<span class="author">';
-      }
-      
-      const fullName = collaborator ? collaborator.full_name : author;
-      authorHtml += fullName;
-      
-      if (isEqualContributor) {
-        authorHtml += '*';
-      }
-      
-      authorHtml += collaborator && collaborator.url ? '</a>' : '</span>';
-      
-      if (isSelf) {
-        authorHtml = `<span class="author-self">${authorHtml}</span>`;
-      }
-      
-      if (index < authors.length - 1) {
-        authorHtml += ', ';
-      }
-      
-      return authorHtml;
-    }).join('');
-  }
-
-  formatAwardsInline(awards = [], id) {
-    if (!awards || awards.length === 0) {
-      return '';
-    }
-    
-    return awards.map(award => {
-      let awardHtml = '<span class="award-inline">';
-      awardHtml += '<i class="fas fa-trophy"></i> ';
-      
-      if (award.link) {
-        awardHtml += `<a href="${award.link}" target="_blank" rel="noopener">${award.name}</a>`;
-      } else {
-        const awardFile = `./files/${id}_award.pdf`;
-        awardHtml += `<a href="${awardFile}" target="_blank">${award.name}</a>`;
-      }
-      
-      awardHtml += '</span>';
-      return awardHtml;
-    }).join(' ');
-  }
-
-  getPublicationImages(publication) {
-    const id = publication.id;
-    
-    if (publication.image_extensions && Array.isArray(publication.image_extensions)) {
-      return publication.image_extensions.map(ext => `${id}${ext}`);
-    }
-    
-    const images = [];
-    
-    for (let i = 1; i <= 2; i++) {
-      images.push(`${id}_${i}.png`);
-      images.push(`${id}_${i}.jpg`);
-      images.push(`${id}_${i}.gif`);
-      images.push(`${id}_${i}.jpeg`);
-    }
-    
-    images.push(`${id}.png`);
-    images.push(`${id}.jpg`);
-    images.push(`${id}.gif`);
-    images.push(`${id}.jpeg`);
-    
-    return images;
-  }
-
-  formatResources(id, resources = [], links = {}) {
-    const resourceLinks = [];
-    
-    resources.forEach(resource => {
-      const filename = `${id}_${resource}.pdf`;
-      const url = `./files/${filename}`;
-      resourceLinks.push(`
-        <a href="${url}" class="resource-link" data-type="${resource}" target="_blank">
-          <i class="fas fa-file-pdf"></i> ${resource.charAt(0).toUpperCase() + resource.slice(1)}
-        </a>
-      `);
-    });
-    
-    Object.entries(links).forEach(([type, url]) => {
-      if (type === 'paper' && resources.includes('paper')) {
-        return;
-      }
-      
+    return Object.entries(links).map(([type, url]) => {
       const iconClass = RESOURCE_ICONS[type] || 'fas fa-external-link-alt';
       const displayName = RESOURCE_NAMES[type] || type.charAt(0).toUpperCase() + type.slice(1);
-      
-      resourceLinks.push(`
+      return `
         <a href="${url}" class="resource-link" data-type="${type}" target="_blank" rel="noopener">
           <i class="${iconClass}"></i> ${displayName}
         </a>
-      `);
-    });
-    
-    if (resourceLinks.length === 0) {
-      return '<span class="no-resources">No resources available</span>';
-    }
-    
-    return resourceLinks.join('\n');
+      `;
+    }).join('\n');
   }
 
-  renderPublication(publication) {
-    const year = this.extractYearFromId(publication.id);
-    const venueAbbr = this.extractVenueAbbrFromId(publication.id);
-    const venueName = this.getVenueName(venueAbbr);
-    const awardsInline = this.formatAwardsInline(publication.awards, publication.id);
-    
-    const images = this.getPublicationImages(publication);
-    const imagesHtml = images.map(img => 
-      `<img src="images/${img}" 
-          alt="Publication image" 
-          class="publication-image"
-          loading="lazy"
-          onerror="this.style.display='none'">`
-    ).join('');
-    
-    return `
-      <article class="publication" data-year="${year}" id="${publication.id}">
-        <div class="publication-content">
-          <h3 class="publication-title">${publication.title}</h3>
-          
-          <div class="publication-authors">
-            ${this.formatAuthors(publication.authors, publication.equal_contribution)}
-          </div>
-          
-          <div class="publication-venue">
-            <span class="venue-name">${venueName}</span>, 
-            <span class="venue-year">${year}</span>
-            ${awardsInline ? `<span class="publication-awards-inline">${awardsInline}</span>` : ''}
-            ${publication.note ? `<span class="publication-note">${publication.note}</span>` : ''}
-          </div>
-          
-          <div class="publication-links">
-            ${this.formatResources(publication.id, publication.resources, publication.links)}
-          </div>
-        </div>
-        
-        ${imagesHtml ? `
-        <div class="publication-media">
-          ${imagesHtml}
-        </div>
-        ` : ''}
-      </article>
-    `;
-  }
+  // ===== SHARED: group items by category and render (publication-style) =====
 
-  renderAllPublications() {
+  renderGrouped(items, categoryField) {
     const grouped = {};
-    
-    this.publications.forEach(publication => {
-      const year = this.extractYearFromId(publication.id);
-      if (!grouped[year]) {
-        grouped[year] = [];
+    const categoriesInOrder = [];
+
+    items.forEach(item => {
+      const cat = item[categoryField] || 'Other';
+      if (!grouped[cat]) {
+        grouped[cat] = [];
+        categoriesInOrder.push(cat);
       }
-      grouped[year].push(publication);
+      grouped[cat].push(item);
     });
-    
-    const yearsInOrder = [...new Set(this.publications.map(pub => 
-      this.extractYearFromId(pub.id)
-    ))];
-    
-    const uniqueYears = [];
-    yearsInOrder.forEach(year => {
-      if (!uniqueYears.includes(year)) {
-        uniqueYears.push(year);
-      }
-    });
-    
+
     let html = '';
-    
-    uniqueYears.forEach(year => {
-      const publications = grouped[year];
-      if (publications && publications.length > 0) {
-        html += `<div class="year-group" id="year-${year}">`;
-        html += `<h3 class="year-title">${year}</h3>`;
-        
-        publications.forEach(publication => {
-          html += this.renderPublication(publication);
+    categoriesInOrder.forEach(cat => {
+      const catItems = grouped[cat];
+      if (catItems && catItems.length > 0) {
+        html += `<div class="year-group" id="cat-${cat.replace(/\s+/g, '-')}">`;
+        html += `<h3 class="year-title">${cat}</h3>`;
+        catItems.forEach(item => {
+          html += this.renderCard(item);
         });
-        
         html += '</div>';
       }
     });
-    
     return html;
   }
 
-  // ===== SERVICES RENDERING =====
-  
-  sortServiceItems(items) {
-    if (!items || !Array.isArray(items)) return [];
-    
-    return [...items].sort((a, b) => {
-      const getLargestYear = (item) => {
-        if (!item.years || !Array.isArray(item.years) || item.years.length === 0) return 0;
-        const years = item.years.map(y => parseInt(y)).filter(y => !isNaN(y));
-        return years.length > 0 ? Math.max(...years) : 0;
-      };
-      
-      const yearA = getLargestYear(a);
-      const yearB = getLargestYear(b);
-      return yearB - yearA;
-    });
+  // ===== SHARED: render flat list (education-style) =====
+
+  renderFlat(items) {
+    return items.map(item => this.renderListItem(item)).join('');
   }
 
-  splitIntoTwoColumns(items) {
-    if (!items || !Array.isArray(items)) return [[], []];
-    const half = Math.ceil(items.length / 2);
-    return [items.slice(0, half), items.slice(half)];
-  }
-
-  formatYears(years) {
-    if (!years || !Array.isArray(years) || years.length === 0) return '';
-    
-    const parsedYears = years
-      .map(y => parseInt(y))
-      .filter(y => !isNaN(y));
-      
-    if (parsedYears.length === 0) return '';
-    
-    const sortedYears = [...parsedYears].sort((a, b) => b - a);
-    return sortedYears.map(year => `'${year.toString().slice(2)}`).join(', ');
-  }
-
-  renderAcademicServices() {
-    const teaching = this.sortServiceItems(this.services.teaching_assistant || []);
-    const reviewer = this.sortServiceItems(this.services.reviewer || []);
-
-    let html = '';
-
-    // Teaching Assistant — each lecture on its own line
-    html += `
-      <div class="education-item">
-        <div class="edu-details">
-          <div class="edu-degree">Teaching Assistant</div>
-          ${teaching.map(item => {
-            const years = this.formatYears(item.years);
-            return `<div class="edu-institution">${item.lectures || 'Unknown'}${years ? ' (<span class="edu-period">' + years + '</span>)' : ''}</div>`;
-          }).join('')}
-        </div>
-      </div>
-    `;
-
-    // Reviewer — inline comma-separated
-    html += `
-      <div class="education-item">
-        <div class="edu-details">
-          <div class="edu-degree">Reviewer</div>
-          <div class="edu-institution">${reviewer.map((item, index) => {
-            const years = this.formatYears(item.years);
-            const sep = index < reviewer.length - 1 ? ', ' : '';
-            return `${item.conference || 'Unknown'}${years ? ' (<span class="edu-period">' + years + '</span>)' : ''}${sep}`;
-          }).join('')}</div>
-        </div>
-      </div>
-    `;
-
-    return html;
-  }
-
-  renderEducation() {
-    const educationData = [
-      {
-        degree: 'M.Sc. in Electrical Engineering',
-        institution: 'Columbia University',
-        period: '2017 - 2019'
-      },
-      {
-        degree: 'M. Eng. in Automation (With Honors)',
-        institution: 'Beihang University',
-        period: '2013 - 2017'
-      }
-    ];
-    
-    return educationData.map(edu => {
-      // Build supervisors HTML if they exist
-      let supervisorsHtml = '';
-      if (edu.supervisors) {
-        const supervisorLinks = edu.supervisors.map(sup => {
-          const collaborator = this.collaborators[sup.collaborator];
-          const title = collaborator?.title || '';
-          const fullName = collaborator?.full_name || sup.name;
-          const displayName = title ? `${title} ${fullName}` : fullName;
-          
-          // Create actual <a> tag if URL exists, otherwise just text
-          if (collaborator?.url) {
-            return `<a href="${collaborator.url}" class="collaborator-link" target="_blank" rel="noopener noreferrer">${displayName}</a>`;
-          } else {
-            return `<span>${displayName}</span>`;
-          }
-        }).join(' and ');
-        
-        supervisorsHtml = `
-          <div class="edu-supervisors">
-            <strong>Supervisors:</strong> ${supervisorLinks}
-          </div>
-        `;
-      }
-      
-      // Build thesis HTML if it exists
-      let thesisHtml = '';
-      if (edu.thesis) {
-        thesisHtml = `
-          <div class="edu-thesis">
-            <strong>Thesis:</strong> 
-            ${edu.thesisLink ? 
-              `<a href="${edu.thesisLink}" class="thesis-link" target="_blank" rel="noopener noreferrer">${edu.thesis}</a>` :
-              edu.thesis
-            }
-          </div>
-        `;
-      }
-      
-      return `
-        <div class="education-item">
-          <div class="edu-details">
-            <div class="edu-degree">${edu.degree}</div>
-            <div class="edu-institution">${edu.institution}</div>
-            <div class="edu-period-details">
-              <div class="edu-period">${edu.period}</div>
-              ${thesisHtml}
-              ${supervisorsHtml}
-            </div>
-          </div>
-        </div>
-      `;
-    }).join('');
-  }
-
-
-  renderResearchExperience(researchExperience) {
-    if (!researchExperience || !Array.isArray(researchExperience)) {
-      return '<p class="no-data">No research experience found.</p>';
-    }
-
-    const sortedExperience = [...researchExperience].sort((a, b) => {
-      const getStartYear = (period) => {
-        if (!period) return 0;
-        const match = period.match(/(\d{4})/);
-        return match ? parseInt(match[1]) : 0;
-      };
-      return getStartYear(b.period) - getStartYear(a.period);
-    });
-
-    return sortedExperience.map(exp => {
-      let advisorHtml = '';
-      if (exp.advisor && this.collaborators[exp.advisor]) {
-        const collaborator = this.collaborators[exp.advisor];
-        const title = collaborator.title || '';
-        const displayName = title ? `${title} ${collaborator.full_name}` : collaborator.full_name;
-        
-        // Create actual <a> tag if URL exists, otherwise just text
-        if (collaborator.url) {
-          advisorHtml = `Advised by <a href="${collaborator.url}" class="collaborator-link" target="_blank" rel="noopener noreferrer">${displayName}</a>`;
-        } else {
-          advisorHtml = `Advised by <span>${displayName}</span>`;
-        }
-      } else if (exp.note) {
-        advisorHtml = exp.note;
-      }
-      
-      return `
-        <div class="experience-item">
-          <div class="exp-details">
-            <div class="exp-title">${exp.title || ''}</div>
-            <div class="exp-institution-lab">
-              <span class="exp-institution">${exp.institution || 'Unknown'}</span>
-              ${exp.lab ? `<span class="exp-lab">${exp.lab}</span>` : ''}
-              ${exp.department ? `<span class="exp-lab">${exp.department}</span>` : ''}
-            </div>
-            <div class="exp-period-note">
-              ${exp.period ? `<span class="exp-period">${exp.period}</span>` : ''}
-              ${advisorHtml ? `<span class="exp-note">${advisorHtml}</span>` : ''}
-            </div>
-          </div>
-        </div>
-      `;
-    }).join('');
-  }
-
-  // ===== NOVEL RENDERING =====
-
-  renderNovel(novel) {
-    return `
-      <article class="publication" id="novel-${novel.title.replace(/\s+/g, '-')}">
-        <div class="publication-content">
-          <h3 class="publication-title">${novel.title}</h3>
-          <div class="publication-venue">
-            <span class="venue-year">${novel.year || ''}</span>
-          </div>
-        </div>
-      </article>
-    `;
-  }
+  // ===== SECTION RENDERERS =====
 
   renderAllNovels() {
-    // Group by author, preserving order of first appearance
-    const grouped = {};
-    const authorsInOrder = [];
+    return this.renderGrouped(this.novels, 'category');
+  }
 
-    this.novels.forEach(novel => {
-      const author = novel.author || 'Unknown';
-      if (!grouped[author]) {
-        grouped[author] = [];
-        authorsInOrder.push(author);
-      }
-      grouped[author].push(novel);
-    });
+  renderAllModels() {
+    return this.renderGrouped(this.models, 'category');
+  }
 
-    let html = '';
+  renderAllCars() {
+    return this.renderGrouped(this.cars, 'category');
+  }
 
-    authorsInOrder.forEach(author => {
-      const novels = grouped[author];
-      if (novels && novels.length > 0) {
-        html += `<div class="year-group" id="author-${author.replace(/\s+/g, '-')}">`;
-        html += `<h3 class="year-title">${author}</h3>`;
+  renderAllWatches() {
+    return this.renderGrouped(this.watches, 'category');
+  }
 
-        novels.forEach(novel => {
-          html += this.renderNovel(novel);
-        });
+  renderAllMovies() {
+    return this.renderGrouped(this.movies, 'category');
+  }
 
-        html += '</div>';
-      }
-    });
+  renderAllLego() {
+    return this.renderFlat(this.lego);
+  }
 
-    return html;
+  renderAllGames() {
+    return this.renderFlat(this.games);
+  }
+
+  renderAllTvshows() {
+    return this.renderFlat(this.tvshows);
   }
 }
