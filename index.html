@@ -82,78 +82,116 @@
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <main class="container" id="main-content">
+<main class="container" id="main-content">
         <!-- About Section -->
         <section id="about" class="section" aria-labelledby="about-heading">
             <div class="profile-section">
                 <!-- Left column: Photo and info -->
                 <div class="profile-image">
-                    <img src="/images/crow.jpg" 
-                         alt="Rivendell" 
+                    <img src="./images/weikangwang_cq_cropped.JPG" 
+                         alt="Wang Weikang (王伟康)" 
                          class="profile-photo"
                          loading="lazy"
                          width="160"
                          height="160">
+                    
+                    <div class="profile-info">
+                        <div class="profile-actions">
+                            <a href="https://github.com/Wei-kang-Wang" class="btn btn-secondary" target="_blank">
+                                <i class="fab fa-github" aria-hidden="true"></i> GitHub
+                            </a>
+                            <a href="mailto:wang@cs.uni-bonn.de" class="btn btn-secondary">
+                                <i class="fas fa-envelope" aria-hidden="true"></i> Contact
+                            </a>
+                        </div>
+                    </div>
                 </div>
                 
                 <!-- Right column: Text and bio -->
                 <div class="profile-text">
-                    <h1 class="profile-name" id="about-heading">Rivendell
-                        <span class="profile-title">我的兴趣小屋</span>
+                    <h1 class="profile-name" id="about-heading">Wang Weikang (王伟康)
+                        <span class="profile-title">PhD student, Uni Bonn</span>
                     </h1>
                     
                     <div class="profile-bio">
-                        <p>这里是我的兴趣爱好小屋，欢迎同好们浏览。
+                        <p>I am currently a PhD student of the <a href="https://lovc.cs.uni-bonn.de/">Learning and Optimisation for Visual Computing Group</a>, in the <a href="https://cg.cs.uni-bonn.de/">institute of computer science II</a>, at the University of Bonn, supervised by Professor Florian Bernard. I am also a member of the
+                            <a href="https://lamarr-institute.org/">Lamarr Institute for Machine Learning and Artificial Intelligence</a>. 
                         </p>
-                        <p>
-                            爱好包括但不限于推理小说、模型、乐高、手表、车、游戏、电影等。
+                        <p>Before that, I obtained the M.Sc. degree in <a href="https://www.ee.columbia.edu/">Electrical Engineering</a> of <a href="https://www.columbia.edu/">Columbia University</a>, and B. Eng. degree in Automation with distiction 
+                            from <a href="https://ev.buaa.edu.cn/">Beihang University</a>.
+                        </p>
+                        <p>My research interests is mainly related to object geometry analysis, pose estimation, shape analysis and geometry processing.
                         </p>
                     </div>
                 </div>
             </div>
+        </section>
 
-
+        <!-- 推理小说 Section (grouped by author, publication-style) -->
         <section id="novels" class="section" aria-labelledby="novels-heading">
             <h2 class="section-title" id="novels-heading">推理小说</h2>
             <div class="publications-container" id="novelsContainer">
-                <div class="loading">Loading novels...</div>
+                <div class="loading">Loading...</div>
             </div>
         </section>
 
-        
+        <!-- 模型 Section (grouped by brand, publication-style) -->
+        <section id="models" class="section" aria-labelledby="models-heading">
+            <h2 class="section-title" id="models-heading">模型</h2>
+            <div class="publications-container" id="modelsContainer">
+                <div class="loading">Loading...</div>
+            </div>
+        </section>
+
+        <!-- 乐高 Section (flat list, education-style) -->
+        <section id="lego" class="section" aria-labelledby="lego-heading">
+            <h2 class="section-title" id="lego-heading">乐高</h2>
+            <div class="education-grid" id="legoContainer">
+                <div class="loading">Loading...</div>
+            </div>
+        </section>
+
+        <!-- 车 Section (grouped by brand, publication-style) -->
+        <section id="cars" class="section" aria-labelledby="cars-heading">
+            <h2 class="section-title" id="cars-heading">车</h2>
+            <div class="publications-container" id="carsContainer">
+                <div class="loading">Loading...</div>
+            </div>
+        </section>
+
+        <!-- 表 Section (grouped by brand, publication-style) -->
+        <section id="watches" class="section" aria-labelledby="watches-heading">
+            <h2 class="section-title" id="watches-heading">表</h2>
+            <div class="publications-container" id="watchesContainer">
+                <div class="loading">Loading...</div>
+            </div>
+        </section>
+
+        <!-- 游戏 Section (flat list, education-style) -->
+        <section id="games" class="section" aria-labelledby="games-heading">
+            <h2 class="section-title" id="games-heading">游戏</h2>
+            <div class="education-grid" id="gamesContainer">
+                <div class="loading">Loading...</div>
+            </div>
+        </section>
+
+        <!-- 电影 Section (grouped by director, publication-style) -->
+        <section id="movies" class="section" aria-labelledby="movies-heading">
+            <h2 class="section-title" id="movies-heading">电影</h2>
+            <div class="publications-container" id="moviesContainer">
+                <div class="loading">Loading...</div>
+            </div>
+        </section>
+
+        <!-- 电视剧 Section (flat list, education-style) -->
+        <section id="tvshows" class="section" aria-labelledby="tvshows-heading">
+            <h2 class="section-title" id="tvshows-heading">电视剧</h2>
+            <div class="education-grid" id="tvshowsContainer">
+                <div class="loading">Loading...</div>
+            </div>
+        </section>
+
     </main>
-
-
-
-    <!-- Back to Top Button -->
-    <button class="back-to-top" id="backToTop" aria-label="Back to top">
-        <i class="fas fa-chevron-up" aria-hidden="true"></i>
-    </button>
-
-    <!-- Publication Template (for dynamic rendering) -->
-    <template id="publicationTemplate">
-        <article class="publication" data-year="">
-            <div class="publication-content">
-                <h3 class="publication-title"></h3>
-                
-                <div class="publication-authors"></div>
-                
-                <div class="publication-venue">
-                    <span class="venue-name"></span>, 
-                    <span class="venue-year"></span>
-                    <span class="publication-awards-inline"></span>
-                    <span class="publication-note"></span>
-                </div>
-                
-                <div class="publication-links"></div>
-            </div>
-            
-            <div class="publication-media">
-                <!-- Dynamically added images -->
-            </div>
-        </article>
-    </template>
 
     <!-- JavaScript Modules -->
     <script type="module">
