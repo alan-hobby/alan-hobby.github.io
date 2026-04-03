@@ -112,8 +112,49 @@ export class Renderer {
 
   // ===== SECTION RENDERERS =====
 
+  // ===== NOVEL: image-based card with links below =====
+
+  renderNovelCard(item) {
+    const linksHtml = this.formatLinks(item.links || {});
+    const imageHtml = item.image
+      ? `<img src="images/${item.image}" alt="${item.title}" title="${item.title}" class="novel-cover" loading="lazy" onerror="this.style.display='none'">`
+      : '';
+
+    return `
+      <div class="novel-card" id="${item.id}">
+        ${imageHtml}
+        ${linksHtml ? `<div class="novel-links">${linksHtml}</div>` : ''}
+      </div>
+    `;
+  }
+
   renderAllNovels() {
-    return this.renderGrouped(this.novels, 'category');
+    const grouped = {};
+    const categoriesInOrder = [];
+
+    this.novels.forEach(item => {
+      const cat = item.category || 'Other';
+      if (!grouped[cat]) {
+        grouped[cat] = [];
+        categoriesInOrder.push(cat);
+      }
+      grouped[cat].push(item);
+    });
+
+    let html = '';
+    categoriesInOrder.forEach(cat => {
+      const catItems = grouped[cat];
+      if (catItems && catItems.length > 0) {
+        html += `<div class="year-group" id="cat-${cat.replace(/\s+/g, '-')}">`;
+        html += `<h3 class="year-title">${cat}</h3>`;
+        html += `<div class="novel-grid">`;
+        catItems.forEach(item => {
+          html += this.renderNovelCard(item);
+        });
+        html += '</div></div>';
+      }
+    });
+    return html;
   }
 
   renderAllModels() {
