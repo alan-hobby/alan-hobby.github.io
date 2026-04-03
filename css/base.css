@@ -690,3 +690,35 @@ a:focus-visible {
 @media (max-width: 767px) {
   .sm-block { display: block; }
 }
+
+/* Novel grid layout */
+.novel-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-lg);
+}
+
+.novel-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+}
+
+.novel-cover {
+  width: 100px;
+  height: auto;
+  border-radius: var(--border-radius-md);
+  object-fit: cover;
+}
+
+.novel-links {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-xs);
+  justify-content: center;
+}
+
+.novel-links .resource-link {
+  font-size: var(--font-size-xs);
+}
