@@ -1,0 +1,19 @@
+{
+  "research_experience": [
+    {
+      "id": "academic_visitor",
+      "institution": "University of Science and Technology of China",
+      "lab": "USTC-AC Research Group",
+      "title": "Visiting Student",
+      "period": "Apr 2019 - Sep 2021",
+      "advisor": "Shangfei"
+    },
+    {
+      "id": "research_intern",
+      "institution": "Institute of Automation, Chinese Academy of Sciences",
+      "lab": "National Lab of Pattern Recognition",
+      "title": "Research Intern",
+      "period": "Sep 2016 - June 2017"
+    }
+  ]
+}

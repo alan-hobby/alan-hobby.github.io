@@ -1,0 +1,86 @@
+{
+  "institutions": {
+
+     "Uni-Bonn": {
+      "name": "University of Bonn",
+      "abbr": "UniBonn",
+      "url": "https://www.uni-bonn.de/en",
+      "logo": "images/bonn.png",
+      "country": "Germany",
+      "type": "university"
+    },
+
+    "LOVC": {
+      "name": "Learning and Optimisation for Visual Computing",
+      "abbr": "LOVC",
+      "url": "https://lovc.cs.uni-bonn.de/",
+      "logo": "images/bonn.png",
+      "parent": "UniBonn",
+      "type": "lab"
+    },
+
+    "TUM": {
+      "name": "Technical University of Munich",
+      "abbr": "TUM",
+      "url": "https://www.tum.de/en/",
+      "logo": "images/bonn.png",
+      "country": "Germany",
+      "type": "university"
+    },
+
+    "BUAA": {
+      "name": "Beihang University",
+      "abbr": "BUAA",
+      "url": "https://www.buaa.edu.cn/",
+      "logo": "images/buaa.jpg",
+      "country": "China",
+      "type": "university"
+    },
+
+    "USTC": {
+      "name": "University of Science and Technology of China",
+      "abbr": "USTC",
+      "url": "https://en.ustc.edu.cn/",
+      "logo": "images/ustc.jpg",
+      "country": "China",
+      "type": "university"
+    },
+
+    "USTC-AC": {
+      "name": "USTC-AC Research Group",
+      "abbr": "USTC-AC",
+      "url": "https://ustc-ac.github.io/",
+      "logo": "",
+      "parent": "USTC",
+      "type": "lab"
+    },
+
+    "Simon-Fraser-University": {
+      "name": "Simon Fraser University",
+      "abbr": "Simon-Fraser-University",
+      "url": "https://www.sfu.ca/",
+      "logo": "images/ustc.jpg",
+      "country": "Canada",
+      "type": "university"
+    },
+
+    "Imperial-College-London": {
+      "name": "Imperial College London",
+      "abbr": "Imperial-College-London",
+      "url": "https://www.imperial.ac.uk/",
+      "logo": "images/ustc.jpg",
+      "country": "UK",
+      "type": "university"
+    },
+
+    "Troyes": {
+      "name": "University of Technology of Troyes",
+      "abbr": "Troyes",
+      "url": "https://www.utt.fr/study-at-utt",
+      "logo": "images/ustc.jpg",
+      "country": "France",
+      "type": "university"
+    }
+    
+  }
+}

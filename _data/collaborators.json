@@ -1,0 +1,161 @@
+{
+  "collaborators": {
+    "Weikang": {
+      "full_name": "Weikang Wang",
+      "url": "https://wei-kang-wang.github.io/",
+      "institution": "Uni-Bonn",
+      "self": true
+    },
+    "Dongliang": {
+      "full_name": "Dongliang Cao",
+      "url": "https://dongliangcao.github.io/",
+      "institution": "Uni-Bonn"
+    },
+    "Nafie": {
+      "full_name": "Nafie El Amrani",
+      "url": "https://nafieamrani.github.io/",
+      "institution": "Uni-Bonn"
+    },
+    "Tobias": {
+      "full_name": "Tobias Weißberg",
+      "url": "https://www.weissberg.io/",
+      "institution": "Uni-Bonn"
+    },
+    "Viktoria": {
+      "full_name": "Viktoria Ehm",
+      "url": "https://vikiehm.github.io/",
+      "institution": "Uni-Bonn"
+    },
+    "Paul": {
+      "full_name": "Paul Roetzer",
+      "url": "https://paulroetzer.github.io/",
+      "institution": "Uni-Bonn"
+    },
+    "Yizheng": {
+      "full_name": "Yizheng Xie",
+      "url": "https://xieyizheng.com/",
+      "institution": "Simon-Fraser-University"
+    },
+    "Lennart": {
+      "full_name": "Lennart Bastian",
+      "url": "https://bastianlb.github.io/",
+      "institution": "Imperial-College-London"
+    },
+    "Maolin": {
+      "full_name": "Maolin Gao",
+      "url": "https://maolingao.github.io/",
+      "institution": "TUM"
+    },
+    "Lu": {
+      "full_name": "Lu Sang",
+      "url": "https://sangluisme.github.io/",
+      "institution": "TUM"
+    },
+    "Bin": {
+      "full_name": "Bin Xia",
+      "url": "https://scholar.google.com/citations?user=bL3R4CgAAAAJ&hl=en",
+      "institution": "USTC"
+    },
+    "Ruoxi": {
+      "full_name": "Ruoxi Qin",
+      "url": "https://www.linkedin.com/in/ruoxiqin",
+      "institution": "BUAA"
+    },
+    "Qianhong": {
+      "full_name": "Qianhong Yan",
+      "url": "https://cn.linkedin.com/in/qianhong-yan-274b3ab4",
+      "institution": "BUAA"
+    },
+    "Haotian": {
+      "full_name": "Haotian Jiang",
+      "url": "https://www.linkedin.com/in/haotian-jiang-272900150",
+      "institution": "BUAA"
+    },
+    "Florian": {
+      "full_name": "Florian Bernard",
+      "title": "Prof.",
+      "url": "https://lovc.cs.uni-bonn.de/index.php/team/florian-bernard/",
+      "institution": "Uni-Bonn"
+    },
+    "Daniel": {
+      "full_name": "Daniel Cremers",
+      "title": "Prof.",
+      "url": "https://www.professoren.tum.de/en/cremers-daniel",
+      "institution": "TUM"
+    },
+    "Zorah": {
+      "full_name": "Zorah Lähner",
+      "title": "Prof.",
+      "url": "https://geometryinml.cs.uni-bonn.de/team/zorah/",
+      "institution": "Uni-Bonn"
+    },
+    "Riccardo": {
+      "full_name": "Riccardo Marin",
+      "title": "Prof.",
+      "url": "https://www.professoren.tum.de/marin-riccardo",
+      "institution": "TUM"
+    },
+    "Daniel_Scholz": {
+      "full_name": "Daniel Scholz",
+      "title": "Dr.",
+      "url": "https://scholar.google.com/citations?user=XotNAGRKc00C&hl=en",
+      "institution": "TUM"
+    },
+    "Shangfei": {
+      "full_name": "Shangfei Wang",
+      "title": "Prof.",
+      "url": "https://faculty.ustc.edu.cn/wangshangfei/en/index.htm",
+      "institution": "USTC"
+    },
+    "Enhong": {
+      "full_name": "Enhong Chen",
+      "title": "Prof.",
+      "url": "https://faculty.ustc.edu.cn/chenenhong/en/index.htm",
+      "institution": "USTC"
+    },
+    "Tian": {
+      "full_name": "Tian Wang",
+      "title": "Prof.",
+      "url": "https://shi.buaa.edu.cn/wangtian/en/index.htm",
+      "institution": "BUAA"
+    },
+    "Hichem": {
+      "full_name": "Hichem Snoussi",
+      "title": "Prof.",
+      "url": "http://h.snoussi.free.fr/",
+      "institution": "Troyes"
+    },
+    "Baochang": {
+      "full_name": "Baochang Zhang",
+      "title": "Prof.",
+      "url": "https://scholar.google.com.hk/citations?user=ImJz6MsAAAAJ&hl=en",
+      "institution": "BUAA"
+    },
+    "Borui": {
+      "full_name": "Borui Yang",
+      "institution": "BUAA"
+    },
+    "Changlong":{
+      "full_name": "Changlong Wang",
+      "institution":"Tsinghua"
+    },
+    "WenNi":{
+      "full_name": "Wen Ni",
+      "title": "Prof.",
+      "institution":"University of Science and Technology Beijing",
+      "url": "https://faculty.ustb.edu.cn/WenNi/en/index.htm"
+    },
+    "Shuang":{
+      "full_name": "Shuang Wang"
+    },
+    "Siqi":{
+      "full_name": "Siqi Zhang",
+      "url": "https://orcid.org/0000-0001-8533-2749",
+      "institution": "University of Science and Technology Beijing"
+    },
+    "Guosheng":{
+    "full_name": "Guosheng Gai",
+    "url": "https://www.mse.tsinghua.edu.cn/szqk/txry.htm",
+    "institution": "Tsinghua University"}
+  }
+}
