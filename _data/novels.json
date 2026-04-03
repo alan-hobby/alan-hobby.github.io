@@ -1,0 +1,34 @@
+{
+  "novels": [
+    {
+      "title": "The Decagon House Murders",
+      "author": "Yukito Ayatsuji",
+      "year": "1987"
+    },
+    {
+      "title": "The Mill House Murders",
+      "author": "Yukito Ayatsuji",
+      "year": "1988"
+    },
+    {
+      "title": "The Devotion of Suspect X",
+      "author": "Keigo Higashino",
+      "year": "2005"
+    },
+    {
+      "title": "Salvation of a Saint",
+      "author": "Keigo Higashino",
+      "year": "2008"
+    },
+    {
+      "title": "And Then There Were None",
+      "author": "Agatha Christie",
+      "year": "1939"
+    },
+    {
+      "title": "Murder on the Orient Express",
+      "author": "Agatha Christie",
+      "year": "1934"
+    }
+  ]
+}
