@@ -10,11 +10,13 @@ export const DATA_PATHS = {
 export const RESOURCE_ICONS = {
   page: 'fas fa-globe',
   pdf: 'fas fa-file-pdf',
-  epub: 'fas fa-book'
+  epub: 'fas fa-book',
+  analysis: 'fas fa-pen-fancy'
 };
 
 export const RESOURCE_NAMES = {
   page: 'Page',
   pdf: 'PDF',
-  epub: 'EPUB'
+  epub: 'EPUB',
+  analysis: 'Analysis'
 };
