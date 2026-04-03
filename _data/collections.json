@@ -1,0 +1,45 @@
+{
+  "novels": [
+    { "id": "novel_001", "title": "十角馆事件", "category": "绫辻行人", "subtitle": "馆系列第一作", "image": "novel_001.jpg", "links": { "pdf": "#", "epub": "#" } },
+    { "id": "novel_002", "title": "水车馆事件", "category": "绫辻行人", "subtitle": "馆系列第二作", "image": "novel_002.jpg", "links": { "pdf": "#", "epub": "#" } },
+    { "id": "novel_003", "title": "嫌疑人X的献身", "category": "东野圭吾", "subtitle": "伽利略系列", "image": "novel_003.jpg", "links": { "pdf": "#", "epub": "#" } },
+    { "id": "novel_004", "title": "白夜行", "category": "东野圭吾", "subtitle": "", "image": "novel_004.jpg", "links": { "pdf": "#", "epub": "#" } },
+    { "id": "novel_005", "title": "无人生还", "category": "阿加莎·克里斯蒂", "subtitle": "", "image": "novel_005.jpg", "links": { "pdf": "#", "epub": "#" } },
+    { "id": "novel_006", "title": "东方快车谋杀案", "category": "阿加莎·克里斯蒂", "subtitle": "", "image": "novel_006.jpg", "links": { "pdf": "#", "epub": "#" } }
+  ],
+  "models": [
+    { "id": "model_001", "title": "AE86 Trueno", "category": "Toyota", "subtitle": "1:18 Scale", "image": "model_001.jpg", "links": { "page": "#" } },
+    { "id": "model_002", "title": "Supra MK4", "category": "Toyota", "subtitle": "1:24 Scale", "image": "model_002.jpg", "links": { "page": "#" } },
+    { "id": "model_003", "title": "GT-R R34", "category": "Nissan", "subtitle": "1:18 Scale", "image": "model_003.jpg", "links": { "page": "#" } }
+  ],
+  "lego": [
+    { "id": "lego_001", "title": "Millennium Falcon", "subtitle": "75192 · 7541 pieces", "image": "lego_001.jpg" },
+    { "id": "lego_002", "title": "Hogwarts Castle", "subtitle": "71043 · 6020 pieces", "image": "lego_002.jpg" },
+    { "id": "lego_003", "title": "Colosseum", "subtitle": "10276 · 9036 pieces", "image": "lego_003.jpg" }
+  ],
+  "cars": [
+    { "id": "car_001", "title": "911 Carrera", "category": "Porsche", "subtitle": "992 Generation", "image": "car_001.jpg", "links": { "page": "#" } },
+    { "id": "car_002", "title": "718 Cayman", "category": "Porsche", "subtitle": "", "image": "car_002.jpg", "links": { "page": "#" } },
+    { "id": "car_003", "title": "M3 Competition", "category": "BMW", "subtitle": "G80", "image": "car_003.jpg", "links": { "page": "#" } }
+  ],
+  "watches": [
+    { "id": "watch_001", "title": "Speedmaster Moonwatch", "category": "Omega", "subtitle": "Professional", "image": "watch_001.jpg", "links": { "page": "#" } },
+    { "id": "watch_002", "title": "Submariner", "category": "Rolex", "subtitle": "Date 41mm", "image": "watch_002.jpg", "links": { "page": "#" } },
+    { "id": "watch_003", "title": "Royal Oak", "category": "Audemars Piguet", "subtitle": "15500ST", "image": "watch_003.jpg", "links": { "page": "#" } }
+  ],
+  "games": [
+    { "id": "game_001", "title": "The Legend of Zelda: Tears of the Kingdom", "subtitle": "Nintendo Switch · 2023", "image": "game_001.jpg" },
+    { "id": "game_002", "title": "Elden Ring", "subtitle": "PC · 2022", "image": "game_002.jpg" },
+    { "id": "game_003", "title": "Red Dead Redemption 2", "subtitle": "PC · 2018", "image": "game_003.jpg" }
+  ],
+  "movies": [
+    { "id": "movie_001", "title": "Inception", "category": "Christopher Nolan", "subtitle": "2010", "image": "movie_001.jpg", "links": { "page": "#" } },
+    { "id": "movie_002", "title": "Interstellar", "category": "Christopher Nolan", "subtitle": "2014", "image": "movie_002.jpg", "links": { "page": "#" } },
+    { "id": "movie_003", "title": "Parasite", "category": "Bong Joon-ho", "subtitle": "2019", "image": "movie_003.jpg", "links": { "page": "#" } }
+  ],
+  "tvshows": [
+    { "id": "tv_001", "title": "Breaking Bad", "subtitle": "2008–2013 · 5 Seasons", "image": "tv_001.jpg" },
+    { "id": "tv_002", "title": "Dark", "subtitle": "2017–2020 · 3 Seasons", "image": "tv_002.jpg" },
+    { "id": "tv_003", "title": "Sherlock", "subtitle": "2010–2017 · 4 Seasons", "image": "tv_003.jpg" }
+  ]
+}
