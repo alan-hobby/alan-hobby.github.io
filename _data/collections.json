@@ -1,102 +1,11 @@
 {
   "novels": [
-    { "id": "novel_001", 
-      "title": "十角馆事件", 
-      "category": "绫辻行人", 
-      "subtitle": "馆系列第一作", 
-      "image": "novel_001.jpg", 
-      "links": { 
-        "pdf": "#", 
-        "epub": "#" } 
-    },
-
-    {
-      "id": "novel_002",
-      "title": "爱的成人式",
-      "category": "乾 くるみ",
-      "image": "/novels/爱的成人式.jpg",
-      "links": {
-        "epub":"/files/爱的成人式.epub"
-      }
-    }
-    
-    { "id": "novel_002", 
-      "title": "水车馆事件", 
-      "category": "绫辻行人", 
-      "subtitle": "馆系列第二作", 
-      "image": "novel_002.jpg", 
-      "links": { 
-        "pdf": "#", 
-        "epub": "#" 
-      } 
-    },
-    
-    { "id": "novel_003", 
-      "title": "嫌疑人X的献身", 
-      "category": "东野圭吾", 
-      "subtitle": "伽利略系列", 
-      "image": "novel_003.jpg", 
-      "links": { 
-        "pdf": "#", 
-        "epub": "#" 
-      } 
-    },
-    
-    { "id": "novel_004", 
-      "title": "白夜行", 
-      "category": "东野圭吾", 
-      "subtitle": "", 
-      "image": "novel_004.jpg", 
-      "links": { 
-        "pdf": "#", 
-        "epub": "#" 
-      } 
-    },
-    
-    { "id": "novel_005", 
-      "title": "无人生还", 
-      "category": "阿加莎·克里斯蒂", 
-      "subtitle": "", 
-      "image": "novel_005.jpg", 
-      "links": { 
-        "pdf": "#", 
-        "epub": "#" 
-      } 
-    },
-    
-    { "id": "novel_006", 
-      "title": "东方快车谋杀案", 
-      "category": "阿加莎·克里斯蒂", 
-      "subtitle": "", 
-      "image": "novel_006.jpg", 
-      "links": { 
-        "pdf": "#", 
-        "epub": "#" 
-      } 
-    }
+    { "id": "novel_001", "title": "神的游戏", "category": "麻耶雄嵩", "image": /images/novels/神的游戏.jpg", "links": {"epub": "/files/神的游戏.epub" }},
+      {"id": "novel_002", "title": "爱的成人式", "category": "乾 くるみ", "image": "/images/novels/爱的成人式.jpg", "links": {"epub": "/files/爱的成人式.epub"}}
   ],
-  
   "models": [
-    { "id": "model_001", 
-      "title": "AE86 Trueno", 
-      "category": "Toyota", 
-      "subtitle": "1:18 Scale", 
-      "image": "model_001.jpg", 
-      "links": { 
-        "page": "#" 
-      } 
-    },
-    
-    { "id": "model_002", 
-      "title": "Supra MK4", 
-      "category": "Toyota", 
-      "subtitle": "1:24 Scale", 
-      "image": "model_002.jpg", 
-      "links": { 
-        "page": "#" 
-      } 
-    },
-    
+    { "id": "model_001", "title": "AE86 Trueno", "category": "Toyota", "subtitle": "1:18 Scale", "image": "model_001.jpg", "links": {"page": "#"}},
+    { "id": "model_002", "title": "Supra MK4", "category": "Toyota", "subtitle": "1:24 Scale", "image": "model_002.jpg", "links": { "page": "#" } },
     { "id": "model_003", "title": "GT-R R34", "category": "Nissan", "subtitle": "1:18 Scale", "image": "model_003.jpg", "links": { "page": "#" } }
   ],
   "lego": [
