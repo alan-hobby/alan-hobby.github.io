@@ -1,7 +1,10 @@
 {
   "novels": [
     { "id": "novel_001", "title": "神的游戏", "category": "麻耶雄嵩", "image": "/images/novels/神的游戏.jpg", "links": {"epub": "/files/神的游戏.epub" }},
-    { "id": "novel_002", "title": "爱的成人式", "category": "乾 くるみ", "image": "/images/novels/爱的成人式.jpg", "links": {"epub": "/files/爱的成人式.epub"}}
+    { "id": "novel_002", "title": "爱的成人式", "category": "乾 くるみ", "image": "/images/novels/爱的成人式.jpg", "links": {"epub": "/files/爱的成人式.epub"}},
+    { "id": "novel_003", "title": "夏与冬的奏鸣曲", "category": "麻耶雄嵩", "image": "/images/novels/夏与冬的奏鸣曲.jpg", "links": {"epub": "/files/夏与冬的奏鸣曲.epub"}},
+    { "id": "novel_004", "title": "&bigcirc&bigcirc&bigcirc&bigcirc&bigcirc&bigcirc&bigcirc&bigcirc杀人事件", "category": "早坂吝", "image": "/images/novels/八圈杀人事件.jpg", "links": {"epub": "/files/八圈杀人事件.epub"}},
+    { "id": "novel_005", "title": "独眼少女", "category": "麻耶雄嵩", "image": "/images/novels/独眼少女.jpg", "links": {"epub": "/files/独眼少女.epub"}}
   ],
   "models": [
     { "id": "model_001", "title": "AE86 Trueno", "category": "Toyota", "subtitle": "1:18 Scale", "image": "model_001.jpg", "links": {"page": "#"}},
