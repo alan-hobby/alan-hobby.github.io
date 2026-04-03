@@ -113,7 +113,14 @@
     { "id": "movie_045", "title": "速度与激情8", "category": "Christopher Nolan", "image": "movies/速度与激情8.jpg"},
     { "id": "movie_045", "title": "速度与激情9", "category": "Christopher Nolan", "image": "movies/速度与激情9.jpg"},
     { "id": "movie_045", "title": "速度与激情10", "category": "Christopher Nolan", "image": "movies/速度与激情10.jpg"},
-    { "id": "movie_045", "title": "速度与激情特别行动", "category": "Christopher Nolan", "image": "movies/速度与激情特别行动.jpg"}
+    { "id": "movie_045", "title": "速度与激情特别行动", "category": "Christopher Nolan", "image": "movies/速度与激情特别行动.jpg"},
+    { "id": "movie_045", "title": "模仿游戏", "category": "Christopher Nolan", "image": "movies/模仿游戏.jpg"},
+    { "id": "movie_045", "title": "黑客帝国1", "category": "Christopher Nolan", "image": "movies/黑壳帝国1.jpg"},
+    { "id": "movie_045", "title": "黑客帝国2", "category": "Christopher Nolan", "image": "movies/黑壳帝国2.jpg"},
+    { "id": "movie_045", "title": "黑客帝国3", "category": "Christopher Nolan", "image": "movies/黑壳帝国3.jpg"},
+    { "id": "movie_045", "title": "黑壳帝国4", "category": "Christopher Nolan", "image": "movies/黑壳帝国4.jpg"},
+    { "id": "movie_045", "title": "彗星来的那一夜", "category": "Christopher Nolan", "image": "movies/彗星来的那一夜.jpg"},
+    { "id": "movie_045", "title": "火星救援", "category": "Christopher Nolan", "image": "movies/火星救援.jpg"}
   ],
   "tvshows": [
     { "id": "tv_001", "title": "Breaking Bad", "subtitle": "2008–2013 · 5 Seasons", "image": "tv_001.jpg" },
