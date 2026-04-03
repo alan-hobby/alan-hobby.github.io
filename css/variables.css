@@ -73,8 +73,8 @@
   --spacing-3xl: 1.75rem;
   
   /* Publication specific spacing */
-  --publication-padding: var(--spacing-sm);
-  --publication-margin-bottom: var(--spacing-xs);
+  --publication-padding: 0.125rem 0;
+  --publication-margin-bottom: 0;
   --year-group-gap: var(--spacing-md);
   
   /* ===== BORDERS & SHADOWS ===== */
