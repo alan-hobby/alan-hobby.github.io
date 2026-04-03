@@ -170,7 +170,12 @@ export class Renderer {
   }
 
   renderAllMovies() {
-    return this.renderGrouped(this.movies, 'category');
+    let html = '<div class="novel-grid">';
+    this.movies.forEach(item => {
+      html += this.renderNovelCard(item);
+    });
+    html += '</div>';
+    return html;
   }
 
   renderAllLego() {
