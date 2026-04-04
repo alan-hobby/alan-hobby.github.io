@@ -158,6 +158,12 @@
     { "id": "movie_101", "title": "异形契约", "category": "Christopher Nolan", "image": "movies/异形契约.jpg"},
     { "id": "movie_102", "title": "异形夺命舰", "category": "Christopher Nolan", "image": "movies/异形夺命舰.jpg"},
     { "id": "movie_103", "title": "异形地球", "category": "Christopher Nolan", "image": "movies/异形地球.jpg"},
+    { "id": "movie_109", "title": "死神来了1", "category": "Christopher Nolan", "image": "movies/死神来了1.jpg"},
+    { "id": "movie_110", "title": "死神来了2", "category": "Christopher Nolan", "image": "movies/死神来了2.jpg"},
+    { "id": "movie_111", "title": "死神来了3", "category": "Christopher Nolan", "image": "movies/死神来了3.jpg"},
+    { "id": "movie_112", "title": "死神来了4", "category": "Christopher Nolan", "image": "movies/死神来了4.jpg"},
+    { "id": "movie_113", "title": "死神来了5", "category": "Christopher Nolan", "image": "movies/死神来了5.jpg"},
+    { "id": "movie_114", "title": "死神来了6", "category": "Christopher Nolan", "image": "movies/死神来了6.jpg"},
     { "id": "movie_064", "title": "疯狂的石头", "category": "Christopher Nolan", "image": "movies/疯狂的石头.jpg"},
     { "id": "movie_065", "title": "疯狂的赛车", "category": "Christopher Nolan", "image": "movies/疯狂的赛车.jpg"},
     { "id": "movie_066", "title": "无人区", "category": "Christopher Nolan", "image": "movies/无人区.jpg"},
@@ -177,7 +183,12 @@
     { "id": "movie_080", "title": "中国合伙人", "category": "Christopher Nolan", "image": "movies/中国合伙人.jpg"},
     { "id": "movie_081", "title": "后会无期", "category": "Christopher Nolan", "image": "movies/后会无期.jpg"},
     { "id": "movie_082", "title": "风声", "category": "Christopher Nolan", "image": "movies/风声.jpg"},
-    { "id": "movie_083", "title": "血观音", "category": "Christopher Nolan", "image": "movies/血观音.jpg"}
+    { "id": "movie_083", "title": "血观音", "category": "Christopher Nolan", "image": "movies/血观音.jpg"},
+    { "id": "movie_104", "title": "建国大业", "category": "Christopher Nolan", "image": "movies/建国大业.jpg"},
+    { "id": "movie_105", "title": "建军大业", "category": "Christopher Nolan", "image": "movies/建军大业.jpg"},
+    { "id": "movie_106", "title": "大决战辽沈战役", "category": "Christopher Nolan", "image": "movies/大决战辽沈战役.jpg"},
+    { "id": "movie_107", "title": "大决战平津战役", "category": "Christopher Nolan", "image": "movies/大决战平津战役.jpg"},
+    { "id": "movie_108", "title": "大决战淮海战役", "category": "Christopher Nolan", "image": "movies/大决战淮海战役.jpg"}
   ],
   "tvshows": [
     { "id": "tv_001", "title": "生活大爆炸第一季", "image": "tvs/生活大爆炸第一季.jpg" },
