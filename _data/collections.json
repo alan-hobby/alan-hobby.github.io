@@ -16,6 +16,7 @@
     { "id": "novel_004", "title": "〇〇〇〇〇〇〇〇杀人事件", "category": "早坂吝", "image": "novels/八圈杀人事件.jpg", "links": {"epub": "/files/八圈杀人事件.epub", "analysis": "./_posts/novels/八圈杀人事件.html"}},
     { "id": "novel_008", "title": "彩虹牙刷", "category": "早坂吝", "image": "novels/彩虹牙刷.jpg", "links": {"epub": "/files/彩虹牙刷.epub", "analysis": "./_posts/novels/彩虹牙刷.html"}},
     { "id": "novel_009", "title": "四元馆事件", "category": "早坂吝", "image": "novels/四元馆事件.jpg", "links": {"epub": "/files/四元馆事件.epub", "analysis": "./_posts/novels/四元馆事件.html"}},
+    { "id": "novel_098", "title": "VR浮游馆之谜", "category": "早坂吝", "image": "novels/VR浮游馆之谜.jpg", "links": {"epub": "/files/VR浮游馆之谜.epub", "analysis": "./_posts/novels/VR浮游馆之谜.html"}},
     { "id": "novel_010", "title": "双蛇密室", "category": "早坂吝", "image": "novels/双蛇密室.jpg", "links": {"epub": "/files/双蛇密室.epub", "analysis": "./_posts/novels/双蛇密室.html"}},
     { "id": "novel_011", "title": "爱丽丝罪恶奇境", "category": "早坂吝", "image": "novels/爱丽丝罪恶奇境.jpg", "links": {"epub": "/files/爱丽丝罪恶奇境.epub", "analysis": "./_posts/novels/爱丽丝罪恶奇境.html"}},
     { "id": "novel_067", "title": "侦探AI", "category": "早坂吝", "image": "novels/侦探AI.jpg", "links": {"epub": "/files/侦探AI.epub", "analysis": "./_posts/novels/侦探AI.html"}},
