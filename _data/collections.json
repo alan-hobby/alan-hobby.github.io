@@ -67,6 +67,7 @@
     { "id": "novel_034", "title": "作者不详", "category": "三津田信三", "image": "novels/作者不详.jpg", "links": {"epub": "/files/作者不详.epub", "analysis": "./_posts/novels/作者不详.html"}},
     { "id": "novel_029", "title": "咚咚吊桥坠落", "category": "绫辻行人", "image": "novels/咚咚吊桥坠落.jpg", "links": {"epub": "/files/咚咚吊桥坠落.epub", "analysis": "./_posts/novels/咚咚吊桥坠落.html"}},
     { "id": "novel_030", "title": "十角馆事件", "category": "绫辻行人", "image": "novels/十角馆事件.jpg", "links": {"epub": "/files/十角馆事件.epub", "analysis": "./_posts/novels/十角馆事件.html"}},
+    { "id": "novel_100", "title": "钟表馆事件", "category": "绫辻行人", "image": "novels/钟表馆事件.jpg", "links": {"epub": "/files/钟表馆事件.epub", "analysis": "./_posts/novels/钟表馆事件.html"}},
     { "id": "novel_091", "title": "解体诸因", "category": "西泽保彦", "image": "novels/解体诸因.jpg", "links": {"epub": "/files/解体诸因.epub", "analysis": "./_posts/novels/解体诸因.html"}},
     { "id": "novel_092", "title": "死了七次的男人", "category": "西泽保彦", "image": "novels/死了七次的男人.jpg", "links": {"epub": "/files/死了七次的男人.epub", "analysis": "./_posts/novels/死了七次的男人.html"}},
     { "id": "novel_002", "title": "爱的成人式", "category": "乾 くるみ", "image": "novels/爱的成人式.jpg", "links": {"epub": "/files/爱的成人式.epub", "analysis": "./_posts/novels/爱的成人式.html"}},
