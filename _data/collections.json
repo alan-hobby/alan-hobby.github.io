@@ -50,7 +50,6 @@
     { "id": "novel_043", "title": "象之首", "category": "白井智之", "image": "novels/象之首.jpg", "links": {"epub": "/files/象之首.epub", "analysis": "./_posts/novels/象之首.html"}},
     { "id": "novel_044", "title": "毒瘾侦探", "category": "白井智之", "image": "novels/毒瘾侦探.jpg", "links": {"epub": "/files/毒瘾侦探.epub", "analysis": "./_posts/novels/毒瘾侦探.html"}},
     { "id": "novel_045", "title": "晚安人面疮", "category": "白井智之", "image": "novels/晚安人面疮.jpg", "links": {"epub": "/files/晚安人面疮.epub", "analysis": "./_posts/novels/晚安人面疮.html"}},
-    { "id": "novel_061", "title": "上瘾谜题", "category": "白井智之", "image": "novels/上瘾谜题.jpg", "links": {"epub": "/files/上瘾谜题.epub", "analysis": "./_posts/novels/上瘾谜题.html"}},
     { "id": "novel_080", "title": "名侦探原田亘", "category": "白井智之", "image": "novels/名侦探原田亘.jpg", "links": {"epub": "/files/名侦探原田亘.epub", "analysis": "./_posts/novels/名侦探原田亘.html"}},
     { "id": "novel_081", "title": "东京结合人间", "category": "白井智之", "image": "novels/东京结合人间.jpg", "links": {"epub": "/files/东京结合人间.epub", "analysis": "./_posts/novels/东京结合人间.html"}},
     { "id": "novel_032", "title": "如首无作祟之物", "category": "三津田信三", "image": "novels/如首无作祟之物.jpg", "links": {"epub": "/files/如首无作祟之物.epub", "analysis": "./_posts/novels/如首无作祟之物.html"}},
