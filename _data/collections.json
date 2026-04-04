@@ -30,7 +30,10 @@
     { "id": "novel_028", "title": "岛田流杀人事件", "category": "御手洗熊猫", "image": "novels/岛田流杀人事件.jpg", "links": {"epub": "/files/岛田流杀人事件.epub", "analysis": "./_posts/novels/岛田流杀人事件.html"}},
     { "id": "novel_029", "title": "咚咚吊桥坠落", "category": "绫辻行人", "image": "novels/咚咚吊桥坠落.jpg", "links": {"epub": "/files/咚咚吊桥坠落.epub", "analysis": "./_posts/novels/咚咚吊桥坠落.html"}},
     { "id": "novel_030", "title": "十角馆事件", "category": "绫辻行人", "image": "novels/十角馆事件.jpg", "links": {"epub": "/files/十角馆事件.epub", "analysis": "./_posts/novels/十角馆事件.html"}},
-    { "id": "novel_031", "title": "杀死少女的100种方法", "category": "白井智之", "image": "novels/杀死少女的100种方法.jpg", "links": {"epub": "/files/杀死少女的100种方法.epub", "analysis": "./_posts/novels/杀死少女的100种方法.html"}}
+    { "id": "novel_031", "title": "杀死少女的100种方法", "category": "白井智之", "image": "novels/杀死少女的100种方法.jpg", "links": {"epub": "/files/杀死少女的100种方法.epub", "analysis": "./_posts/novels/杀死少女的100种方法.html"}},
+    { "id": "novel_032", "title": "如首无作祟之物", "category": "三津田信三", "image": "novels/如首无作祟之物.jpg", "links": {"epub": "/files/如首无作祟之物.epub", "analysis": "./_posts/novels/如首无作祟之物.html"}},
+    { "id": "novel_033", "title": "神之光", "category": "北山猛邦", "image": "novels/神之光.jpg", "links": {"epub": "/files/神之光.epub", "analysis": "./_posts/novels/神之光.html"}},
+    { "id": "novel_034", "title": "作者不详", "category": "三津田信三", "image": "novels/作者不详.jpg", "links": {"epub": "/files/作者不详.epub", "analysis": "./_posts/novels/作者不详.html"}}
   ],
   "models": [
     { "id": "model_001", "title": "AE86 Trueno", "category": "Toyota", "subtitle": "1:18 Scale", "image": "model_001.jpg", "links": {"page": "#"}},
