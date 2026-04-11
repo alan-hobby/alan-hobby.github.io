@@ -111,6 +111,10 @@
     { "id": "novel_113", "title": "怪画谜案", "category": "雨穴", "image": "novels/怪画谜案.jpg", "links": {"epub": "/files/怪画谜案.epub", "analysis": "./_posts/novels/怪画谜案.html"}},
     { "id": "novel_114", "title": "奇怪的地图", "category": "雨穴", "image": "novels/奇怪的地图.jpg", "links": {"epub": "/files/奇怪的地图.epub", "analysis": "./_posts/novels/奇怪的地图.html"}},
     { "id": "novel_115", "title": "堕天使拷问刑", "category": "飞鸟部胜则", "image": "novels/堕天使拷问刑.jpg", "links": {"epub": "/files/堕天使拷问刑.epub", "analysis": "./_posts/novels/堕天使拷问刑.html"}},
+    { "id": "novel_116", "title": "倒错的死角", "category": "折原一", "image": "novels/倒错的死角.jpg", "links": {"epub": "/files/倒错的死角.epub", "analysis": "./_posts/novels/倒错的死角.html"}},
+    { "id": "novel_117", "title": "倒错的归结", "category": "折原一", "image": "novels/倒错的归结.jpg", "links": {"epub": "/files/倒错的归结.epub", "analysis": "./_posts/novels/倒错的归结.html"}},
+    { "id": "novel_118", "title": "倒错的物体", "category": "折原一", "image": "novels/倒错的物体.jpg", "links": {"epub": "/files/倒错的物体.epub", "analysis": "./_posts/novels/倒错的物体.html"}},
+    { "id": "novel_119", "title": "倒错的轮舞", "category": "折原一", "image": "novels/倒错的轮舞.jpg", "links": {"epub": "/files/倒错的轮舞.epub", "analysis": "./_posts/novels/倒错的轮舞.html"}},
     { "id": "novel_026", "title": "凛冬之棺", "category": "孙沁文", "image": "novels/凛冬之棺.jpg", "links": {"epub": "/files/凛冬之棺.epub", "analysis": "./_posts/novels/凛冬之棺.html"}},
     { "id": "novel_066", "title": "枉死城事件", "category": "时晨", "image": "novels/枉死城事件.jpg", "links": {"epub": "/files/枉死城事件.epub", "analysis": "./_posts/novels/枉死城事件.html"}},
     { "id": "novel_028", "title": "岛田流杀人事件", "category": "御手洗熊猫", "image": "novels/岛田流杀人事件.jpg", "links": {"epub": "/files/岛田流杀人事件.epub", "analysis": "./_posts/novels/岛田流杀人事件.html"}}
