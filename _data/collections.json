@@ -120,6 +120,13 @@
     { "id": "novel_117", "title": "倒错的归结", "category": "折原一", "image": "novels/倒错的归结.jpg", "links": {"epub": "/files/倒错的归结.epub", "analysis": "./_posts/novels/倒错的归结.html"}},
     { "id": "novel_118", "title": "倒错的物体", "category": "折原一", "image": "novels/倒错的物体.jpg", "links": {"epub": "/files/倒错的物体.epub", "analysis": "./_posts/novels/倒错的物体.html"}},
     { "id": "novel_119", "title": "倒错的轮舞", "category": "折原一", "image": "novels/倒错的轮舞.jpg", "links": {"epub": "/files/倒错的轮舞.epub", "analysis": "./_posts/novels/倒错的轮舞.html"}},
+    { "id": "novel_123", "title": "在樱树抽芽时想你", "category": "歌野晶午", "image": "novels/在樱树抽芽时想你.jpg", "links": {"epub": "/files/在樱树抽芽时想你.epub", "analysis": "./_posts/novels/在樱树抽芽时想你.html"}},
+    { "id": "novel_124", "title": "D杀人事件", "category": "歌野晶午", "image": "novels/D杀人事件.jpg", "links": {"epub": "/files/D杀人事件.epub", "analysis": "./_posts/novels/D杀人事件.html"}},
+    { "id": "novel_125", "title": "白屋杀人事件", "category": "歌野晶午", "image": "novels/白屋杀人事件.jpg", "links": {"epub": "/files/白屋杀人事件.epub", "analysis": "./_posts/novels/白屋杀人事件.html"}},
+    { "id": "novel_126", "title": "长屋杀人事件", "category": "歌野晶午", "image": "novels/长屋杀人事件.jpg", "links": {"epub": "/files/长屋杀人事件.epub", "analysis": "./_posts/novels/长屋杀人事件.html"}},
+    { "id": "novel_127", "title": "密室杀人游戏1", "category": "歌野晶午", "image": "novels/密室杀人游戏1.jpg", "links": {"epub": "/files/密室杀人游戏1.epub", "analysis": "./_posts/novels/密室杀人游戏1.html"}},
+    { "id": "novel_128", "title": "密室杀人游戏2", "category": "歌野晶午", "image": "novels/密室杀人游戏2.jpg", "links": {"epub": "/files/密室杀人游戏2.epub", "analysis": "./_posts/novels/密室杀人游戏2.html"}},
+    { "id": "novel_129", "title": "密室杀人游戏3", "category": "歌野晶午", "image": "novels/密室杀人游戏3.jpg", "links": {"epub": "/files/密室杀人游戏3.epub", "analysis": "./_posts/novels/密室杀人游戏3.html"}},
     { "id": "novel_026", "title": "凛冬之棺", "category": "孙沁文", "image": "novels/凛冬之棺.jpg", "links": {"epub": "/files/凛冬之棺.epub", "analysis": "./_posts/novels/凛冬之棺.html"}},
     { "id": "novel_066", "title": "枉死城事件", "category": "时晨", "image": "novels/枉死城事件.jpg", "links": {"epub": "/files/枉死城事件.epub", "analysis": "./_posts/novels/枉死城事件.html"}},
     { "id": "novel_028", "title": "岛田流杀人事件", "category": "御手洗熊猫", "image": "novels/岛田流杀人事件.jpg", "links": {"epub": "/files/岛田流杀人事件.epub", "analysis": "./_posts/novels/岛田流杀人事件.html"}}
