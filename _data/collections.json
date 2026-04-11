@@ -127,6 +127,8 @@
     { "id": "novel_127", "title": "密室杀人游戏1", "category": "歌野晶午", "image": "novels/密室杀人游戏1.jpg", "links": {"epub": "/files/密室杀人游戏1.epub", "analysis": "./_posts/novels/密室杀人游戏1.html"}},
     { "id": "novel_128", "title": "密室杀人游戏2", "category": "歌野晶午", "image": "novels/密室杀人游戏2.jpg", "links": {"epub": "/files/密室杀人游戏2.epub", "analysis": "./_posts/novels/密室杀人游戏2.html"}},
     { "id": "novel_129", "title": "密室杀人游戏3", "category": "歌野晶午", "image": "novels/密室杀人游戏3.jpg", "links": {"epub": "/files/密室杀人游戏3.epub", "analysis": "./_posts/novels/密室杀人游戏3.html"}},
+    { "id": "novel_130", "title": "不会振翅的信天翁", "category": "七河迦南", "image": "novels/不会振翅的信天翁.jpg", "links": {"epub": "/files/不会振翅的信天翁.epub", "analysis": "./_posts/novels/不会振翅的信天翁.html"}},
+    { "id": "novel_131", "title": "照耀七海之星", "category": "七河迦南", "image": "novels/照耀七海之星.jpg", "links": {"epub": "/files/照耀七海之星.epub", "analysis": "./_posts/novels/照耀七海之星.html"}},
     { "id": "novel_026", "title": "凛冬之棺", "category": "孙沁文", "image": "novels/凛冬之棺.jpg", "links": {"epub": "/files/凛冬之棺.epub", "analysis": "./_posts/novels/凛冬之棺.html"}},
     { "id": "novel_066", "title": "枉死城事件", "category": "时晨", "image": "novels/枉死城事件.jpg", "links": {"epub": "/files/枉死城事件.epub", "analysis": "./_posts/novels/枉死城事件.html"}},
     { "id": "novel_028", "title": "岛田流杀人事件", "category": "御手洗熊猫", "image": "novels/岛田流杀人事件.jpg", "links": {"epub": "/files/岛田流杀人事件.epub", "analysis": "./_posts/novels/岛田流杀人事件.html"}}
