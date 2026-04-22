@@ -130,16 +130,16 @@
     { "id": "novel_129", "title": "密室杀人游戏3", "category": "歌野晶午", "image": "novels/密室杀人游戏3.jpg", "links": {"epub": "/files/密室杀人游戏3.epub", "analysis": "./_posts/novels/密室杀人游戏3.html"}},
     { "id": "novel_130", "title": "不会振翅的信天翁", "category": "七河迦南", "image": "novels/不会振翅的信天翁.jpg", "links": {"epub": "/files/不会振翅的信天翁.epub", "analysis": "./_posts/novels/不会振翅的信天翁.html"}},
     { "id": "novel_131", "title": "照耀七海之星", "category": "七河迦南", "image": "novels/照耀七海之星.jpg", "links": {"epub": "/files/照耀七海之星.epub", "analysis": "./_posts/novels/照耀七海之星.html"}},
-    { "id": "novel_026", "title": "凛冬之棺", "category": "孙沁文", "image": "novels/凛冬之棺.jpg", "links": {"epub": "/files/凛冬之棺.epub", "analysis": "./_posts/novels/凛冬之棺.html"}},
-    { "id": "novel_066", "title": "枉死城事件", "category": "时晨", "image": "novels/枉死城事件.jpg", "links": {"epub": "/files/枉死城事件.epub", "analysis": "./_posts/novels/枉死城事件.html"}},
-    { "id": "novel_028", "title": "岛田流杀人事件", "category": "御手洗熊猫", "image": "novels/岛田流杀人事件.jpg", "links": {"epub": "/files/岛田流杀人事件.epub", "analysis": "./_posts/novels/岛田流杀人事件.html"}},
     { "id": "novel_133", "title": "一朵桔梗花", "category": "连城三纪彦", "image": "novels/一朵桔梗花.jpg", "links": {"epub": "/files/一朵桔梗花.epub", "analysis": "./_posts/novels/一朵桔梗花.html"}},
     { "id": "novel_134", "title": "黑死馆杀人事件", "category": "小栗虫太郎", "image": "novels/黑死馆杀人事件.jpg", "links": {"epub": "/files/黑死馆杀人事件.epub", "analysis": "./_posts/novels/黑死馆杀人事件.html"}},
     { "id": "novel_135", "title": "脑髓地狱", "category": "梦野久作", "image": "novels/脑髓地狱.jpg", "links": {"epub": "/files/脑髓地狱.epub", "analysis": "./_posts/novels/脑髓地狱.html"}},
     { "id": "novel_136", "title": "献给虚无的供物", "category": "中井英夫", "image": "novels/献给虚无的供物.jpg", "links": {"epub": "/files/献给虚无的供物.epub", "analysis": "./_posts/novels/献给虚无的供物.html"}},
     { "id": "novel_137", "title": "匣中失乐", "category": "竹本健治", "image": "novels/匣中失乐.jpg", "links": {"epub": "/files/匣中失乐.epub", "analysis": "./_posts/novels/匣中失乐.html"}},
     { "id": "novel_138", "title": "密室收藏家", "category": "大山诚一郎", "image": "novels/密室收藏家.jpg", "links": {"epub": "/files/密室收藏家.epub", "analysis": "./_posts/novels/密室收藏家.html"}},
-    { "id": "novel_139", "title": "双月城的惨剧", "category": "加贺美雅之", "image": "novels/双月城的惨剧.jpg", "links": {"epub": "/files/双月城的惨剧.epub", "analysis": "./_posts/novels/双月城的惨剧.html"}}
+    { "id": "novel_139", "title": "双月城的惨剧", "category": "加贺美雅之", "image": "novels/双月城的惨剧.jpg", "links": {"epub": "/files/双月城的惨剧.epub", "analysis": "./_posts/novels/双月城的惨剧.html"}},
+    { "id": "novel_026", "title": "凛冬之棺", "category": "孙沁文", "image": "novels/凛冬之棺.jpg", "links": {"epub": "/files/凛冬之棺.epub", "analysis": "./_posts/novels/凛冬之棺.html"}},
+    { "id": "novel_066", "title": "枉死城事件", "category": "时晨", "image": "novels/枉死城事件.jpg", "links": {"epub": "/files/枉死城事件.epub", "analysis": "./_posts/novels/枉死城事件.html"}},
+    { "id": "novel_028", "title": "岛田流杀人事件", "category": "御手洗熊猫", "image": "novels/岛田流杀人事件.jpg", "links": {"epub": "/files/岛田流杀人事件.epub", "analysis": "./_posts/novels/岛田流杀人事件.html"}}
   ],
   "models": [
     { "id": "model_001", "title": "AE86 Trueno", "category": "Toyota", "subtitle": "1:18 Scale", "image": "model_001.jpg", "links": {"page": "#"}},
