@@ -241,7 +241,10 @@
     { "id": "game_017", "title": "地狱边境", "image": "games/地狱边境.jpg" },
     { "id": "game_018", "title": "纪念碑谷1", "image": "games/纪念碑谷1.jpg" },
     { "id": "game_019", "title": "纪念碑谷2", "image": "games/纪念碑谷2.jpg" },
-    { "id": "game_020", "title": "纪念碑谷3", "image": "games/纪念碑谷3.jpg" }
+    { "id": "game_020", "title": "纪念碑谷3", "image": "games/纪念碑谷3.jpg" },
+    { "id": "game_021", "title": "forza_horizon4", "image": "games/forza_horizon4.jpg" },
+    { "id": "game_022", "title": "forza_horizon5", "image": "games/forza_horizon5.jpg" },
+    { "id": "game_023", "title": "forza_horizon6", "image": "games/forza_horizon6.jpg" }
   ],
   "movies": [
     { "id": "movie_001", "title": "盗梦空间", "category": "Christopher Nolan", "image": "movies/盗梦空间.jpg"},
