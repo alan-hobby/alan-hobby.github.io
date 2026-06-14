@@ -378,7 +378,8 @@
     { "id": "movie_106", "title": "大决战辽沈战役", "category": "Christopher Nolan", "image": "movies/大决战辽沈战役.jpg"},
     { "id": "movie_107", "title": "大决战平津战役", "category": "Christopher Nolan", "image": "movies/大决战平津战役.jpg"},
     { "id": "movie_108", "title": "大决战淮海战役", "category": "Christopher Nolan", "image": "movies/大决战淮海战役.jpg"},
-    { "id": "movie_136", "title": "八佰", "category": "Christopher Nolan", "image": "movies/八佰.jpg"}
+    { "id": "movie_136", "title": "八佰", "category": "Christopher Nolan", "image": "movies/八佰.jpg"},
+    { "id": "movie_137", "title": "分手清单", "category": "Christopher Nolan", "image": "movies/分手清单.jpg"}
   ],
   "tvshows": [
     { "id": "tv_001", "title": "生活大爆炸第一季", "image": "tvs/生活大爆炸第一季.jpg" },
