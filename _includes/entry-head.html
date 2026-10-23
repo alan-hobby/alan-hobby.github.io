@@ -29,8 +29,13 @@
 {%- else -%}
 {%- assign link_q = page.zh_title | default: page.title | url_encode -%}
 {%- assign href = c.default_url | append: link_q -%}
-{%- endif %}
+{%- endif -%}
+{%- assign href_ext = href | split: "." | last | downcase -%}
+{%- if href_ext == "epub" or href_ext == "pdf" %}
+<li class="chip chip--link"><a href="{{ href | relative_url }}" download>{% include icon.html name="download" %}<span class="chip-v">下载</span></a></li>
+{%- else %}
 <li class="chip chip--link"><a href="{{ href }}" target="_blank" rel="noopener">{% include icon.html name=c.icon %}<span class="chip-v">{{ c.label }}</span></a></li>
+{%- endif -%}
 {%- elsif vs != "" %}
 <li class="chip">{% include icon.html name=c.icon %}<span class="chip-k">{{ c.label }}</span><span class="chip-v{% if c.mono %} mono{% endif %}">{{ v | join: " · " }}</span></li>
 {%- endif -%}

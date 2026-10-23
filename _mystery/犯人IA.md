@@ -4,7 +4,7 @@ subtitle: "探偵AI 2"
 author: "早坂吝"
 year: 2019
 zh_title: "犯人IA"
-link:                            # 作者旁边的链接，空着时默认跳到豆瓣搜索这本书
+link: "/files/犯人IA.epub"   # 下载链接
 order: 22
 cover: "/images/novels/犯人IA.jpg"
 ---

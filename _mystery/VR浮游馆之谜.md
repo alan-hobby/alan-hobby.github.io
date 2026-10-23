@@ -4,7 +4,7 @@ subtitle: "探偵AIのリアル・ディープラーニング"
 author: "早坂吝"
 year: 2024
 zh_title: "VR浮游馆之谜"
-link:                            # 作者旁边的链接，空着时默认跳到豆瓣搜索这本书
+link: "/files/VR浮游馆之谜.epub"   # 下载链接
 order: 18
 cover: "/images/novels/VR浮游馆之谜.jpg"
 ---
