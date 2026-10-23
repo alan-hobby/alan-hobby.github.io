@@ -13,26 +13,9 @@ item_no: "08416"
 acquired: "[日期]"                # 入藏日期，例如 "2024-05-12"
 source: "[渠道]"                  # 渠道，例如 店铺名 / 二手
 
-# 图集的照片文件夹：照片直接传到这个文件夹里，传几张就显示几张（不限张数，可以左右翻），
-# 按文件名排序，不用一张张写进这个文件。文件夹里有照片后，下面的占位图就不再显示。
+# 图集：照片直接放进下面这个文件夹，放几张就显示几张，不限张数，可以左右翻。
+# 按文件名排序，不用一张张写进这个文件。文件夹里还没有照片时，只显示一张“还没有照片”的占位图。
 photos: /images/cars/ferrari-f40/
-
-# 占位图（文件夹里还没有照片时显示）
-images:
-  - src: /assets/img/placeholder/car-side.svg
-    caption: 主图 · 前 45°
-  - src: /assets/img/placeholder/car-side.svg
-    caption: 正侧面
-  - src: /assets/img/placeholder/car-rear.svg
-    caption: 车尾 45°
-  - src: /assets/img/placeholder/engine.svg
-    caption: 发动机舱
-  - src: /assets/img/placeholder/interior.svg
-    caption: 内饰
-  - src: /assets/img/placeholder/wheel.svg
-    caption: 轮毂
-  - src: /assets/img/placeholder/box.svg
-    caption: 原厂盒
 
 # 右侧“规格”，留空的行不会显示
 specs:

@@ -14,12 +14,7 @@ item_no:                         # 货号，加引号
 acquired:                        # 入藏日期，例如 "2025-03-01"
 source:                          # 渠道
 
-photos: /images/cars/文件夹名/      # 照片直接传进这个文件夹，传几张显示几张，按文件名排序
-images:                          # 不用文件夹时，也可以一张张写（可以带说明）；第一张是主图
-  - src: /images/cars/文件名.jpg
-    caption: 主图 · 前 45°
-  - src: /images/cars/文件名.jpg
-    caption: 正侧面
+photos: /images/cars/文件夹名/      # 照片直接放进这个文件夹，放几张显示几张，按文件名排序
 
 specs:                           # 右侧“规格”，空着的行不显示
   原型车:

@@ -3,7 +3,7 @@
   1. 条目里写 photos: /images/cars/文件夹名/
      这个文件夹里有几张图就显示几张，按文件名排序，不用一张张写进 md。
   2. 条目里写 images: 列表，每张可以带说明 caption（例如占位图）。
-  文件夹里有照片时用文件夹里的；没有时用 images 列表。
+  文件夹里有照片时用文件夹里的；没有时用 images 列表；两个都没有，就显示一张“还没有照片”。
 {%- endcomment -%}
 {%- assign gl_srcs = "" -%}
 {%- assign gl_caps = "" -%}
@@ -25,6 +25,10 @@
 {%- assign gl_caps = gl_caps | append: im.caption | append: " |" -%}
 {%- endif -%}
 {%- endfor -%}
+{%- endif -%}
+{%- if gl_srcs == "" and page.photos and page.photos != "" -%}
+{%- assign gl_srcs = "/assets/img/placeholder/car-side.svg|" -%}
+{%- assign gl_caps = "还没有照片 |" -%}
 {%- endif -%}
 {%- assign gl_src = gl_srcs | split: "|" -%}
 {%- assign gl_cap = gl_caps | split: "|" -%}

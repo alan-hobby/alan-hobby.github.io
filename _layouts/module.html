@@ -26,6 +26,7 @@ layout: default
 {%- endfor -%}
 {%- endif -%}
 {%- unless thumb -%}{%- assign img0 = it.images | first -%}{%- assign thumb = img0.src -%}{%- endunless -%}
+{%- unless thumb -%}{%- if it.photos -%}{%- assign thumb = "/assets/img/placeholder/car-side.svg" -%}{%- endif -%}{%- endunless -%}
 {%- else -%}{%- assign thumb = it.cover -%}{%- endif %}
 <a class="entry-card" href="{{ it.url | relative_url }}" data-filterable{% include filter-attrs.html item=it mod=mod %}>
 <span class="entry-thumb">{% if thumb %}<img src="{{ thumb | relative_url }}" alt="" loading="lazy">{% endif %}</span>
