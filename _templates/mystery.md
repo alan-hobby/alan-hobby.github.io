@@ -1,15 +1,14 @@
 ---
-# 复制到 _mystery/ 文件夹，文件名用英文小写加连字符，例如 _mystery/mill-house-murders.md
-title: 书名
-subtitle: 作者 · 年份
+# 复制到 _mystery/ 文件夹，文件名就用中文书名，例如 _mystery/水车馆事件.md
+title: 水車館の殺人                 # 书名用原版名字（哪国作者就用哪国语言）
+subtitle:                        # 原版书名里的副标题，没有就空着
+author: 綾辻行人                    # 作者原名，左侧目录按它分组
 year: 1988                       # 原作出版年份
+zh_title: 水车馆事件                # 中文书名，只用于搜索
+link:                            # 作者旁边的链接，空着时默认跳到豆瓣搜索这本书
 order:                           # 排序：数字越小越靠前，不填排在最后
 number:
 status: 已读                      # 在读 / 已读 / 想读
-school: 新本格                    # 流派，左侧可以按它筛选
-tags: [孤岛]                      # 诡计标签，可以写多个，例如 [密室, 不在场证明]
-author:                          # 作者，左侧目录按它分组
-original_title:                  # 原名
 edition:                         # 中文版出版社 · 译者
 finished:                        # 读完日期，例如 "2025-03-01"
 rating:
@@ -18,7 +17,6 @@ cover: /images/novels/文件名.jpg
 
 info:
   作者:
-  原名:
   首版:
   中文版:
   译者:

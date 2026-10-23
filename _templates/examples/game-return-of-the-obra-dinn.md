@@ -1,12 +1,11 @@
 ---
 title: Return of the Obra Dinn
-short_title: 奥伯拉丁的回归
-subtitle: 奥伯拉丁的回归 · 2018
+zh_title: 奥伯拉丁的回归
 year: 2018
+author: [Lucas Pope]
 number:                         # 藏品编号，例如 "018"（记得加引号）
 status: 已通关                   # 在玩 / 已通关 / 想玩
 genre: 解谜
-developer: Lucas Pope
 platform:                       # 例如 PC / Switch
 hours:                          # 例如 12 小时
 finished:                       # 通关日期

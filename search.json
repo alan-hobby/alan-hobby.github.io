@@ -5,7 +5,8 @@ permalink: /search.json
 [
 {%- for mod in site.data.modules -%}
 {%- for it in site[mod.id] %}
-{"t":{{ it.title | jsonify }},"s":{{ it.subtitle | jsonify }},"k":{{ it.short_title | jsonify }},"m":{{ mod.name | jsonify }},"u":{{ it.url | relative_url | jsonify }}},
+{%- capture kw -%}{{ it.short_title }} {{ it.zh_title }} {{ it.author | join: " " }} {{ it.director | join: " " }} {{ it.writer | join: " " }} {{ it.cast | join: " " }}{%- endcapture %}
+{"t":{{ it.title | jsonify }},"s":{{ it.subtitle | jsonify }},"k":{{ kw | strip | jsonify }},"m":{{ mod.name | jsonify }},"u":{{ it.url | relative_url | jsonify }}},
 {%- endfor -%}
 {%- endfor %}
 null]

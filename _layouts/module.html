@@ -20,7 +20,8 @@ layout: default
 <span class="entry-thumb">{% if thumb %}<img src="{{ thumb | relative_url }}" alt="" loading="lazy">{% endif %}</span>
 {%- if it.status %}<span class="entry-status">{{ it.status }}</span>{% endif %}
 <span class="entry-title">{{ it.title }}</span>
-{%- if it.subtitle %}<span class="entry-sub">{{ it.subtitle }}</span>{% endif %}
+{%- if mod.card_sub -%}{%- assign card_sub = it[mod.card_sub] | join: " · " -%}{%- else -%}{%- assign card_sub = it.subtitle -%}{%- endif -%}
+{%- if card_sub and card_sub != "" %}<span class="entry-sub">{{ card_sub }}</span>{% endif %}
 </a>
 {%- endfor %}
 </div>

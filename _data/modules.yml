@@ -6,9 +6,12 @@
 # group_by    左侧目录按哪个字段分组（这个字段都没填时，就不分组）
 # list_meta   目录每一行右侧显示哪个字段
 # thumb       模块首页卡片的缩略图比例：wide（4:3）/ cover（3:4）/ poster（2:3）
+# card_sub    模块首页卡片里，标题下面那一行小字取哪个字段（不写就用 subtitle）
 # filters     左侧筛选。只有条目里真的填了这个字段，筛选按钮才会出现；
 #             写了 values 时按 values 的顺序排
-# chips       标题卡里那一排标签，字段为空就不显示
+# chips       标题卡里那一排标签，字段为空就不显示。
+#             写了 link: true 的是链接按钮：条目里填了这个字段就用它，
+#             空着就用 default_url 加上中文名（zh_title）
 
 - id: cars
   name: 车模
@@ -45,7 +48,7 @@
     - { key: status, label: 状态, values: [在玩, 已通关, 想玩] }
     - { key: platform, label: 平台 }
   chips:
-    - { key: developer, label: 开发, icon: code }
+    - { key: author, label: 作者, icon: pen }
     - { key: platform, label: 平台, icon: monitor }
     - { key: hours, label: 时长, icon: clock }
     - { key: finished, label: 通关, icon: flag }
@@ -66,6 +69,8 @@
     - { key: decade, label: 年代, mono: true }   # 根据 year 自动算出 2010s 这样的年代
   chips:
     - { key: director, label: 导演, icon: clapper }
+    - { key: writer, label: 编剧, icon: pen }
+    - { key: cast, label: 主演, icon: users }
     - { key: runtime, label: 片长, icon: clock }
     - { key: watched, label: 观看, icon: calendar }
     - { key: where, label: 在哪看, icon: monitor }
@@ -75,8 +80,7 @@
   name: 电视剧
   unit: 部
   url: /tv/
-  crumb: series
-  group_by: series
+  group_by: status
   list_meta: year
   thumb: poster
   info_label: 信息
@@ -84,7 +88,9 @@
   filters:
     - { key: status, label: 状态, values: [在看, 看完, 想看] }
   chips:
-    - { key: creator, label: 主创, icon: clapper }
+    - { key: director, label: 导演, icon: clapper }
+    - { key: writer, label: 编剧, icon: pen }
+    - { key: cast, label: 主演, icon: users }
     - { key: episodes, label: 集数, icon: stack }
     - { key: watched, label: 看完, icon: calendar }
     - { key: where, label: 在哪看, icon: monitor }
@@ -94,18 +100,16 @@
   name: 推理小说
   unit: 本
   url: /mystery/
-  crumb: school
   group_by: author
   list_meta: year
   thumb: poster
+  card_sub: author
   info_label: 信息
   log_label: 阅读日志
-  filters:
-    - { key: school, label: 流派 }
-    - { key: tags, label: 诡计 }
+  filters: []
   chips:
     - { key: author, label: 作者, icon: pen }
-    - { key: original_title, label: 原名, icon: quote }
+    - { key: link, label: 链接, icon: link, link: true, default_url: "https://search.douban.com/book/subject_search?search_text=" }
     - { key: edition, label: 版本, icon: book }
     - { key: finished, label: 读完, icon: calendar }
     - { key: rating, label: 评分, icon: star }

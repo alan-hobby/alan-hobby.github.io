@@ -1,14 +1,13 @@
 ---
-# 复制到 _games/ 文件夹，文件名用英文小写加连字符，例如 _games/outer-wilds.md
-title: 游戏原名
-short_title: 中文名               # 左侧目录里显示
-subtitle: 中文名 · 年份
+# 复制到 _games/ 文件夹，文件名就用中文名，例如 _games/星际拓荒.md
+title: Outer Wilds                # 游戏用原版名字
+zh_title: 星际拓荒                  # 中文名，只用于搜索
 year: 2019                       # 发行年份
+author: [Alex Beachum]            # 作者原名（独立游戏写人名，大厂写工作室名）
 order:                           # 排序：数字越小越靠前，不填排在最后
 number:                          # 编号（可空）
 status: 在玩                      # 在玩 / 已通关 / 想玩，左侧目录按它分组
 genre:                           # 类型，例如 解谜
-developer:
 platform:                        # 你玩的平台，例如 PC，左侧可以按它筛选
 hours:                           # 例如 20 小时
 finished:                        # 通关日期，例如 "2025-03-01"

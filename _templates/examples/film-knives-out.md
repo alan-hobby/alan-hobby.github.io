@@ -1,12 +1,13 @@
 ---
 title: Knives Out
-short_title: 利刃出鞘
-subtitle: 利刃出鞘 · 2019
+zh_title: 利刃出鞘
 year: 2019
+director: [Rian Johnson]
+writer: [Rian Johnson]
+cast: [Daniel Craig, Chris Evans, Ana de Armas]
 number:                         # 藏品编号，例如 "018"（记得加引号）
 status: 看过                     # 看过 / 想看
 genre: 悬疑
-director: Rian Johnson
 runtime: 130 分钟
 watched:                        # 观看日期
 where:                          # 影院 / 流媒体
@@ -14,8 +15,6 @@ rating:
 cover: /assets/img/placeholder/poster.svg
 
 info:
-  导演 / 编剧: Rian Johnson
-  主演: Daniel Craig、Ana de Armas、Chris Evans
   片长: 130 分钟
   上映: 2019
   奖项: 奥斯卡最佳原创剧本提名

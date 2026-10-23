@@ -1,13 +1,11 @@
 ---
-title: 十角馆杀人事件
-subtitle: 绫辻行人 · 1987
+title: 十角館の殺人
+author: 綾辻行人
 year: 1987
+zh_title: 十角馆杀人事件
+link:                           # 作者旁边的链接，空着时默认跳到豆瓣搜索这本书
 number:                         # 藏品编号，例如 "018"（记得加引号）
 status: 已读                     # 在读 / 已读 / 想读
-school: 新本格                   # 本格 / 新本格 / 社会派 ...
-tags: [孤岛]                     # 诡计标签，可以写多个，例如 [孤岛, 密室]
-author: 绫辻行人
-original_title: 十角館の殺人
 edition:                        # 中文版出版社 · 译者
 finished:                       # 读完日期
 rating:
@@ -15,12 +13,10 @@ series: 馆系列 第 1 作
 cover: /assets/img/placeholder/cover-book.svg
 
 info:
-  作者: 绫辻行人
-  原名: 十角館の殺人
-  首版: 1987 · 讲谈社
+  作者: 綾辻行人
+  首版: 1987 · 講談社
   中文版:
   译者:
-  标签: 新本格 · 孤岛
 
 likes:
   - （写一句喜欢的地方）
