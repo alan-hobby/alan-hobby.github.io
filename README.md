@@ -41,6 +41,12 @@ _data/modules.yml  五个模块的显示设置（筛选项、标题卡字段等�
 - iPhone 原图太大，先压到长边 2000 像素左右的 JPG 或 WebP（几百 KB）。
 - 车模的 `images` 列表第一张是主图，其余是缩略图，点缩略图会切换主图。
 
+## 首页大图
+
+首页是一张铺满屏幕的大图，现在用的是 `images/rivendell.jpg`。想换图：把新图片放进 `images/`，再把 `_config.yml` 里 `home_image` 那一行改成新图片的路径。横图效果最好，宽 2500 像素以上在大屏幕上也清楚。
+
+图在不同屏幕上会自动裁切。想让它多保留上半部分或左半部分，改 `assets/css/site.css` 里 `.hero-img` 的 `object-position`。
+
 ## 正文里能用的几个写法
 
 插一张图：

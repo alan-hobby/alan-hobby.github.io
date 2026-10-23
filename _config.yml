@@ -5,6 +5,7 @@ title: Riveldell
 tagline: 我的小屋
 description: 我的兴趣爱好小屋，欢迎各位同好浏览。
 avatar: /images/crow.jpg
+home_image: /images/rivendell.jpg   # 首页铺满屏幕的大图，换图就改这一行
 lang: zh-CN
 
 url: "https://alan-hobby.github.io"
