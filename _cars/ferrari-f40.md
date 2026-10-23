@@ -1,24 +1,35 @@
 ---
 title: Ferrari F40
 short_title: F40                 # 左侧目录里显示的短名
-zh_title: 法拉利 F40              # 中文名，只用于搜索
+subtitle: 法拉利 F40 · 1987
 order: 1
-number:                          # 藏品编号，例如 "018"（记得加引号）
+number: "[编号]"                  # 藏品编号，例如 "018"（记得加引号）
 status: 在藏                      # 在藏 / 想要 / 已出
 brand: Ferrari
 scale: "1:18"
-maker: 京商
+maker: Kyosho
 material: 合金压铸
 item_no: "08416"
-acquired:                        # 入藏日期，例如 "2024-05-12"
-source:                          # 渠道，例如 店铺名 / 二手
+acquired: "[日期]"                # 入藏日期，例如 "2024-05-12"
+source: "[渠道]"                  # 渠道，例如 店铺名 / 二手
 
-# 图集：第一张是主图，其余是缩略图。照片放进 images/cars/ 以后，把 [] 换成下面这样：
-#   - src: /images/cars/f40-front.jpg
-#     caption: 主图 · 前 45°
-#   - src: /images/cars/f40-side.jpg
-#     caption: 正侧面
-images: []
+# 图集：第一张是主图。现在都是占位图，有照片以后放进 images/cars/，
+# 再把 src 换成照片的路径，例如 /images/cars/f40-front.jpg
+images:
+  - src: /assets/img/placeholder/car-side.svg
+    caption: 主图 · 前 45°
+  - src: /assets/img/placeholder/car-side.svg
+    caption: 正侧面
+  - src: /assets/img/placeholder/car-rear.svg
+    caption: 车尾 45°
+  - src: /assets/img/placeholder/engine.svg
+    caption: 发动机舱
+  - src: /assets/img/placeholder/interior.svg
+    caption: 内饰
+  - src: /assets/img/placeholder/wheel.svg
+    caption: 轮毂
+  - src: /assets/img/placeholder/box.svg
+    caption: 原厂盒
 
 # 右侧“规格”，留空的行不会显示
 specs:
@@ -30,19 +41,33 @@ specs:
     极速: 324 km/h
     产量: 约 1,300 台
   模型:
-    厂商: 京商
+    厂商: Kyosho
     比例: "1:18"
     材质: 合金压铸
     货号: "08416"
-    可开部件:
+    可开部件: "[待填]"
 
-likes:                           # 喜欢的地方，例如 - 发动机舱的细节
-dislikes:                        # 遗憾的地方
+# “收藏笔记”里并排的三块
+notes:
+  入手经过: "[什么时候、在哪里、为什么是这一台。]"
+  第一印象: "[开箱时最先注意到的地方。]"
+  展示方式: "[放在哪里，用什么展示盒，怎么防尘。]"
+
+likes:
+  - "[一句话]"
+  - "[一句话]"
+dislikes:
+  - "[一句话]"
+  - "[一句话]"
 
 # 右侧“收藏日志”，以后有新动作就往下加一条
 log:
-  - date:                        # 例如 "2024-05-12"
-    text:                        # 例如 入藏
+  - date: "[日期]"
+    text: 入藏
+  - date: "[日期]"
+    text: "[例：补拍发动机舱]"
+  - date: "[日期]"
+    text: "[例：换了展示盒]"
 ---
 
 ## 原型车
@@ -55,35 +80,15 @@ log:
 
 ## 模型
 
-京商出品的 1:18 合金压铸模型，货号 08416。
+Kyosho 的 1:18 合金压铸版本。[这里写做工：哪些部件能打开，发动机舱和内饰的细节，漆面与透明件的质量，和原车相比的取舍。]
 
-<!--
-这一段现在不会显示在网页上。写好以后，把这一段开头和结尾那两行注释符号删掉，就会显示出来。
-
-### 做工
-
-（哪些部件能打开，发动机舱和内饰的细节，漆面与透明件的质量。）
+<div class="figs">
+{% include figure.html src="/assets/img/placeholder/engine.svg" caption="发动机舱 · 后盖打开" %}
+{% include figure.html src="/assets/img/placeholder/interior.svg" caption="内饰 · 车门打开" %}
+</div>
 
 ## 收藏笔记
 
-### 入手经过
-
-（什么时候、在哪里、为什么是这一台。）
-
-### 第一印象
-
-（开箱时最先注意到的地方。）
-
-### 展示方式
-
-（放在哪里，用什么展示盒，怎么防尘。）
-
-照片放进 images/cars/ 以后，可以这样在正文里插两张并排的图：
-
-<div class="figs">
-{% include figure.html src="/images/cars/f40-engine.jpg" caption="发动机舱 · 后盖打开" %}
-{% include figure.html src="/images/cars/f40-interior.jpg" caption="内饰 · 车门打开" %}
-</div>
--->
+{% include notes.html %}
 
 {% include likes.html %}

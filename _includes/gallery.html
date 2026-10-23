@@ -9,7 +9,7 @@
 {%- if page.images.size > 1 %}
 <div class="thumbs">
 {%- for im in page.images %}
-<button type="button" class="thumb" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}" aria-label="查看：{{ im.caption | default: forloop.index | escape }}" data-src="{{ im.src | relative_url }}" data-caption="{{ im.caption | escape }}"><img src="{{ im.src | relative_url }}" alt="" loading="lazy"></button>
+<button type="button" class="thumb" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}" aria-label="查看：{{ im.caption | default: forloop.index | escape }}" data-src="{{ im.src | relative_url }}" data-caption="{{ im.caption | escape }}"><img src="{{ im.src | relative_url }}" alt="" loading="lazy">{% assign tcap = im.caption | split: " · " | first %}{% if tcap %}<span class="thumb-cap">{{ tcap }}</span>{% endif %}</button>
 {%- endfor %}
 </div>
 {%- endif %}
