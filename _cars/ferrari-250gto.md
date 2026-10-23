@@ -3,15 +3,9 @@ title: Ferrari
 short_title: 250 GTO                 # 左侧目录里显示的短名
 subtitle: 250 GTO · 1962
 order: 1
-number: "[编号]"                  # 藏品编号，例如 "018"（记得加引号）
-status: 在藏                      # 在藏 / 想要 / 已出
 brand: Ferrari
 scale: "1:18"
 maker: CMC
-material: 合金压铸
-item_no: "08416"
-acquired: "[日期]"                # 入藏日期，例如 "2024-05-12"
-source: "[渠道]"                  # 渠道，例如 店铺名 / 二手
 
 # 图集：照片直接放进下面这个文件夹，放几张就显示几张，不限张数，可以左右翻。
 # 按文件名排序，不用一张张写进这个文件。文件夹里还没有照片时，只显示一张“还没有照片”的占位图。
