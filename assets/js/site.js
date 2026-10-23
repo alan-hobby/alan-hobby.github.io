@@ -101,13 +101,32 @@
     });
   });
 
-  // ---------- 车模图集：点缩略图换主图 ----------
-  var mainImg = document.getElementById("gallery-main-img");
-  var mainCap = document.getElementById("gallery-main-cap");
-  var thumbs = document.querySelectorAll(".thumb");
-  thumbs.forEach(function (t) {
-    t.addEventListener("click", function () {
-      if (!mainImg) return;
+  // ---------- 图集：张数不限，左右翻 ----------
+  // 点缩略图、点大图两侧的箭头、键盘左右键、手机上左右滑动，都能换图
+  var gallery = document.querySelector("[data-gallery]");
+  if (gallery) {
+    var mainImg = document.getElementById("gallery-main-img");
+    var mainCap = document.getElementById("gallery-main-cap");
+    var counter = document.getElementById("gallery-count");
+    var strip = gallery.querySelector(".thumbs");
+    var thumbs = Array.prototype.slice.call(gallery.querySelectorAll(".thumb"));
+    var cur = 0;
+    var keepInView = function (t) {
+      if (!strip) return;
+      var left = t.offsetLeft;
+      var right = left + t.offsetWidth;
+      var target = null;
+      if (left < strip.scrollLeft) target = left - 8;
+      else if (right > strip.scrollLeft + strip.clientWidth) target = right - strip.clientWidth + 8;
+      if (target !== null) {
+        if (strip.scrollTo) strip.scrollTo({ left: target, behavior: "smooth" });
+        else strip.scrollLeft = target;
+      }
+    };
+    var show = function (i) {
+      if (!thumbs.length || !mainImg) return;
+      cur = (i + thumbs.length) % thumbs.length;
+      var t = thumbs[cur];
       var cap = t.getAttribute("data-caption") || "";
       mainImg.src = t.getAttribute("data-src");
       mainImg.alt = cap;
@@ -115,11 +134,42 @@
         mainCap.textContent = cap;
         mainCap.hidden = !cap;
       }
-      thumbs.forEach(function (o) {
-        o.setAttribute("aria-pressed", o === t ? "true" : "false");
+      if (counter) counter.textContent = cur + 1 + " / " + thumbs.length;
+      thumbs.forEach(function (o, k) {
+        o.setAttribute("aria-pressed", k === cur ? "true" : "false");
       });
+      keepInView(t);
+    };
+    thumbs.forEach(function (t, k) {
+      t.addEventListener("click", function () { show(k); });
     });
-  });
+    var prev = gallery.querySelector(".gal-prev");
+    var next = gallery.querySelector(".gal-next");
+    if (prev) prev.addEventListener("click", function () { show(cur - 1); });
+    if (next) next.addEventListener("click", function () { show(cur + 1); });
+    gallery.addEventListener("keydown", function (e) {
+      if (thumbs.length < 2) return;
+      if (e.key === "ArrowLeft") { e.preventDefault(); show(cur - 1); }
+      if (e.key === "ArrowRight") { e.preventDefault(); show(cur + 1); }
+    });
+    // 手机：在大图上左右滑动
+    var fig = gallery.querySelector(".gallery-main");
+    var x0 = null;
+    var y0 = null;
+    if (fig && thumbs.length > 1) {
+      fig.addEventListener("touchstart", function (e) {
+        x0 = e.touches[0].clientX;
+        y0 = e.touches[0].clientY;
+      }, { passive: true });
+      fig.addEventListener("touchend", function (e) {
+        if (x0 === null) return;
+        var dx = e.changedTouches[0].clientX - x0;
+        var dy = e.changedTouches[0].clientY - y0;
+        if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) show(dx < 0 ? cur + 1 : cur - 1);
+        x0 = null;
+      });
+    }
+  }
 
   // ---------- 搜索 ----------
   var input = document.getElementById("site-search");

@@ -1,16 +1,54 @@
-{%- assign img0 = page.images | first -%}
-<section class="card gallery" aria-label="图集">
+{%- comment -%}
+  图集，张数不限，可以左右翻。图片有两种来源：
+  1. 条目里写 photos: /images/cars/文件夹名/
+     这个文件夹里有几张图就显示几张，按文件名排序，不用一张张写进 md。
+  2. 条目里写 images: 列表，每张可以带说明 caption（例如占位图）。
+  文件夹里有照片时用文件夹里的；没有时用 images 列表。
+{%- endcomment -%}
+{%- assign gl_srcs = "" -%}
+{%- assign gl_caps = "" -%}
+{%- if page.photos and page.photos != "" -%}
+{%- assign gl_dir = page.photos | append: "/" | replace: "//", "/" -%}
+{%- assign gl_files = site.static_files | where_exp: "f", "f.path contains gl_dir" | sort: "path" -%}
+{%- for f in gl_files -%}
+{%- assign gl_ext = f.extname | downcase -%}
+{%- if gl_ext == ".jpg" or gl_ext == ".jpeg" or gl_ext == ".png" or gl_ext == ".webp" or gl_ext == ".gif" or gl_ext == ".avif" -%}
+{%- assign gl_srcs = gl_srcs | append: f.path | append: "|" -%}
+{%- assign gl_caps = gl_caps | append: " |" -%}
+{%- endif -%}
+{%- endfor -%}
+{%- endif -%}
+{%- if gl_srcs == "" -%}
+{%- for im in page.images -%}
+{%- if im.src -%}
+{%- assign gl_srcs = gl_srcs | append: im.src | append: "|" -%}
+{%- assign gl_caps = gl_caps | append: im.caption | append: " |" -%}
+{%- endif -%}
+{%- endfor -%}
+{%- endif -%}
+{%- assign gl_src = gl_srcs | split: "|" -%}
+{%- assign gl_cap = gl_caps | split: "|" -%}
+{%- assign gl_n = gl_src.size -%}
+{%- if gl_n > 0 -%}
+{%- assign gl_cap0 = gl_cap[0] | strip %}
+<section class="card gallery" aria-label="图集" data-gallery>
 <figure class="gallery-main">
-<img id="gallery-main-img" src="{{ img0.src | relative_url }}" alt="{{ img0.caption | default: page.title }}">
-{%- if img0.caption %}
-<figcaption id="gallery-main-cap">{{ img0.caption }}</figcaption>
+<img id="gallery-main-img" src="{{ gl_src[0] | relative_url }}" alt="{% if gl_cap0 != "" %}{{ gl_cap0 | escape }}{% else %}{{ page.title | escape }}{% endif %}">
+<figcaption id="gallery-main-cap"{% if gl_cap0 == "" %} hidden{% endif %}>{{ gl_cap0 }}</figcaption>
+{%- if gl_n > 1 %}
+<button type="button" class="gal-nav gal-prev" aria-label="上一张">{% include icon.html name="chev-left" %}</button>
+<button type="button" class="gal-nav gal-next" aria-label="下一张">{% include icon.html name="chev-right" %}</button>
+<span class="gal-count" id="gallery-count">1 / {{ gl_n }}</span>
 {%- endif %}
 </figure>
-{%- if page.images.size > 1 %}
+{%- if gl_n > 1 %}
 <div class="thumbs">
-{%- for im in page.images %}
-<button type="button" class="thumb" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}" aria-label="查看：{{ im.caption | default: forloop.index | escape }}" data-src="{{ im.src | relative_url }}" data-caption="{{ im.caption | escape }}"><img src="{{ im.src | relative_url }}" alt="" loading="lazy">{% assign tcap = im.caption | split: " · " | first %}{% if tcap %}<span class="thumb-cap">{{ tcap }}</span>{% endif %}</button>
+{%- for s in gl_src %}
+{%- assign gl_c = gl_cap[forloop.index0] | strip -%}
+{%- assign gl_t = gl_c | split: " · " | first %}
+<button type="button" class="thumb" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}" aria-label="第 {{ forloop.index }} 张{% if gl_c != "" %}：{{ gl_c | escape }}{% endif %}" data-src="{{ s | relative_url }}" data-caption="{{ gl_c | escape }}"><img src="{{ s | relative_url }}" alt="" loading="lazy">{% if gl_t and gl_t != "" %}<span class="thumb-cap">{{ gl_t }}</span>{% endif %}</button>
 {%- endfor %}
 </div>
 {%- endif %}
 </section>
+{%- endif -%}

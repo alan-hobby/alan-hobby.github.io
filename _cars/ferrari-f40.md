@@ -13,8 +13,11 @@ item_no: "08416"
 acquired: "[日期]"                # 入藏日期，例如 "2024-05-12"
 source: "[渠道]"                  # 渠道，例如 店铺名 / 二手
 
-# 图集：第一张是主图。现在都是占位图，有照片以后放进 images/cars/，
-# 再把 src 换成照片的路径，例如 /images/cars/f40-front.jpg
+# 图集的照片文件夹：照片直接传到这个文件夹里，传几张就显示几张（不限张数，可以左右翻），
+# 按文件名排序，不用一张张写进这个文件。文件夹里有照片后，下面的占位图就不再显示。
+photos: /images/cars/ferrari-f40/
+
+# 占位图（文件夹里还没有照片时显示）
 images:
   - src: /assets/img/placeholder/car-side.svg
     caption: 主图 · 前 45°

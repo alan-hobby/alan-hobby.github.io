@@ -15,7 +15,18 @@ layout: default
 {%- else %}
 <div class="entry-grid entry-grid--{{ mod.thumb }}">
 {%- for it in mod_items -%}
-{%- if mod.thumb == "wide" -%}{%- assign img0 = it.images | first -%}{%- assign thumb = img0.src -%}{%- else -%}{%- assign thumb = it.cover -%}{%- endif %}
+{%- assign thumb = nil -%}
+{%- if mod.thumb == "wide" -%}
+{%- if it.photos and it.photos != "" -%}
+{%- assign mc_dir = it.photos | append: "/" | replace: "//", "/" -%}
+{%- assign mc_files = site.static_files | where_exp: "f", "f.path contains mc_dir" | sort: "path" -%}
+{%- for f in mc_files -%}
+{%- assign mc_ext = f.extname | downcase -%}
+{%- if mc_ext == ".jpg" or mc_ext == ".jpeg" or mc_ext == ".png" or mc_ext == ".webp" or mc_ext == ".gif" or mc_ext == ".avif" -%}{%- assign thumb = f.path -%}{%- break -%}{%- endif -%}
+{%- endfor -%}
+{%- endif -%}
+{%- unless thumb -%}{%- assign img0 = it.images | first -%}{%- assign thumb = img0.src -%}{%- endunless -%}
+{%- else -%}{%- assign thumb = it.cover -%}{%- endif %}
 <a class="entry-card" href="{{ it.url | relative_url }}" data-filterable{% include filter-attrs.html item=it mod=mod %}>
 <span class="entry-thumb">{% if thumb %}<img src="{{ thumb | relative_url }}" alt="" loading="lazy">{% endif %}</span>
 {%- if it.status %}<span class="entry-status">{{ it.status }}</span>{% endif %}

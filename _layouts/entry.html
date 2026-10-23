@@ -7,7 +7,7 @@ layout: default
 {% include sidebar.html mod=mod %}
 <main class="main" id="main">
 {% include entry-head.html mod=mod %}
-{%- if page.images and page.images.size > 0 %}
+{%- if page.photos or page.images %}
 {% include gallery.html %}
 {%- endif %}
 <div class="cols">
