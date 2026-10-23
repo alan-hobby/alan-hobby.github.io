@@ -1,7 +1,7 @@
 ---
-title: Ferrari 250 GTO
-short_title: Ferrari 250 GTO                 # 左侧目录里显示的短名
-subtitle: 法拉利 250 GTO · 1962
+title: Ferrari
+short_title: 250 GTO                 # 左侧目录里显示的短名
+subtitle: 250 GTO · 1962
 order: 1
 number: "[编号]"                  # 藏品编号，例如 "018"（记得加引号）
 status: 在藏                      # 在藏 / 想要 / 已出
