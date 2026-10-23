@@ -1,0 +1,21 @@
+{%- assign g = include.g -%}
+{%- assign tg_mod = include.mod -%}
+<div class="tree-group">
+{%- if g.name and g.name != "" %}
+<p class="tree-label">{{ g.name }}</p>
+{%- elsif include.single == false %}
+<p class="tree-label">其他</p>
+{%- endif -%}
+{%- for it in g.items -%}
+{%- capture tg_attrs -%}
+{%- for f in tg_mod.filters -%}
+{%- if f.key == "decade" -%}
+{%- if it.year -%}{%- assign tg_d = it.year | divided_by: 10 | times: 10 -%}{{ " " }}data-f-decade="{{ tg_d }}s"{%- else -%}{{ " " }}data-f-decade=""{%- endif -%}
+{%- else -%}
+{{ " " }}data-f-{{ f.key }}="{{ it[f.key] | join: '|' | escape }}"
+{%- endif -%}
+{%- endfor -%}
+{%- endcapture %}
+<a class="tree-item" href="{{ it.url | relative_url }}"{% if it.url == page.url %} aria-current="page"{% endif %} data-filterable{{ tg_attrs }}><span>{{ it.short_title | default: it.title }}</span><span class="meta">{{ it[tg_mod.list_meta] }}</span></a>
+{%- endfor %}
+</div>

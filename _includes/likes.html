@@ -1,0 +1,9 @@
+{%- if page.likes or page.dislikes -%}
+<div class="pros-cons">
+{%- if page.likes %}<div class="pc-box"><h3>喜欢的地方</h3><ul>{% for x in page.likes %}<li>{{ x }}</li>{% endfor %}</ul></div>{% endif -%}
+{%- if page.dislikes %}<div class="pc-box"><h3>遗憾的地方</h3><ul>{% for x in page.dislikes %}<li>{{ x }}</li>{% endfor %}</ul></div>{% endif -%}
+</div>
+{%- endif -%}
+{%- if page.recommend %}
+<p class="recommend"><strong>推荐给</strong><span>{{ page.recommend }}</span></p>
+{%- endif -%}

@@ -1,0 +1,8 @@
+{%- for f in include.mod.filters -%}
+{%- if f.key == "decade" -%}
+{%- if include.item.year -%}{%- assign d = include.item.year | divided_by: 10 | times: 10 -%}{%- assign dv = d | append: "s" -%}{%- else -%}{%- assign dv = "" -%}{%- endif -%}
+{{ " " }}data-f-decade="{{ dv }}"
+{%- else -%}
+{{ " " }}data-f-{{ f.key }}="{{ include.item[f.key] | join: '|' | escape }}"
+{%- endif -%}
+{%- endfor -%}

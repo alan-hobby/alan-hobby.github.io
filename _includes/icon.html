@@ -1,0 +1,20 @@
+{%- capture a -%}class="icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"{%- endcapture -%}
+{%- case include.name -%}
+{%- when "ruler" -%}<svg {{ a }}><path d="M2 11 L11 2 L14 5 L5 14 Z M5 8 L6.5 9.5 M7 6 L8.5 7.5 M9 4 L10.5 5.5"/></svg>
+{%- when "factory" -%}<svg {{ a }}><path d="M2 14 V7 L6 9 V7 L10 9 V3 H14 V14 Z"/></svg>
+{%- when "cube" -%}<svg {{ a }}><path d="M8 1.5 L14 4.75 V11.25 L8 14.5 L2 11.25 V4.75 Z M2 4.75 L8 8 L14 4.75 M8 8 V14.5"/></svg>
+{%- when "hash" -%}<svg {{ a }}><path d="M6 2 L4.5 14 M11.5 2 L10 14 M2.5 5.5 H14 M2 10.5 H13.5"/></svg>
+{%- when "calendar" -%}<svg {{ a }}><rect x="2" y="3" width="12" height="11" rx="1.5"/><path d="M2 6.5 H14 M5 1.5 V4.5 M11 1.5 V4.5"/></svg>
+{%- when "tag" -%}<svg {{ a }}><path d="M2 2 H8 L14 8 L8 14 L2 8 Z"/><circle cx="5" cy="5" r="1"/></svg>
+{%- when "code" -%}<svg {{ a }}><path d="M5 4 L1.5 8 L5 12 M11 4 L14.5 8 L11 12 M9.5 2.5 L6.5 13.5"/></svg>
+{%- when "monitor" -%}<svg {{ a }}><rect x="1.5" y="2.5" width="13" height="9" rx="1.5"/><path d="M5.5 14 H10.5 M8 11.5 V14"/></svg>
+{%- when "clock" -%}<svg {{ a }}><circle cx="8" cy="8" r="6.5"/><path d="M8 4.5 V8 L10.5 9.5"/></svg>
+{%- when "flag" -%}<svg {{ a }}><path d="M3 14.5 V2 M3 2.5 H12 L10 5.5 L12 8.5 H3"/></svg>
+{%- when "star" -%}<svg {{ a }}><path d="M8 1.8 L9.9 5.8 L14.2 6.3 L11 9.2 L11.9 13.5 L8 11.3 L4.1 13.5 L5 9.2 L1.8 6.3 L6.1 5.8 Z"/></svg>
+{%- when "clapper" -%}<svg {{ a }}><path d="M2 6.5 H14 V14 H2 Z M2 6.5 L2.8 3 L13.6 4.6 L13.3 6.5 M6 3.5 L5.3 6.5 M9.8 4 L9.1 6.5"/></svg>
+{%- when "pen" -%}<svg {{ a }}><path d="M10.5 2.5 L13.5 5.5 L5.5 13.5 L2 14 L2.5 10.5 Z"/></svg>
+{%- when "quote" -%}<svg {{ a }}><path d="M2 3 H14 V11 H7 L4 14 V11 H2 Z"/></svg>
+{%- when "book" -%}<svg {{ a }}><path d="M2 3 H6.5 C7.5 3 8 3.5 8 4.5 V14 C8 13 7.5 12.5 6.5 12.5 H2 Z M14 3 H9.5 C8.5 3 8 3.5 8 4.5 V14 C8 13 8.5 12.5 9.5 12.5 H14 Z"/></svg>
+{%- when "stack" -%}<svg {{ a }}><path d="M8 1.5 L14.5 5 L8 8.5 L1.5 5 Z M1.5 8 L8 11.5 L14.5 8 M1.5 11 L8 14.5 L14.5 11"/></svg>
+{%- else -%}<svg {{ a }}><circle cx="8" cy="8" r="2"/></svg>
+{%- endcase -%}

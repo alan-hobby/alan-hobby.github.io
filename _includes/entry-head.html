@@ -1,0 +1,39 @@
+{%- assign mod = include.mod -%}
+{%- assign crumb = page[mod.crumb] -%}
+<section class="card head" aria-labelledby="entry-title">
+<div class="head-meta">
+{%- if page.number %}<span>NO. {{ page.number }}</span>{% endif %}
+<span>{{ mod.name }}{% if crumb and crumb != "" %} / {{ crumb }}{% endif %}{% if mod.id == "cars" and page.short_title %} / {{ page.short_title }}{% endif %}</span>
+{%- if page.status %}
+<span class="pill"><span class="dot" aria-hidden="true"></span>{{ page.status }}</span>
+{%- endif %}
+</div>
+<div class="head-body">
+{%- if page.cover %}
+<img class="cover cover--{{ mod.thumb }}" src="{{ page.cover | relative_url }}" alt="{{ page.title }}">
+{%- endif %}
+<div class="head-text">
+<div class="title-row">
+<h1 id="entry-title">{{ page.title }}</h1>
+{%- if page.subtitle %}
+<span class="subtitle">{{ page.subtitle }}</span>
+{%- endif %}
+</div>
+{%- capture chip_items -%}
+{%- for c in mod.chips -%}
+{%- assign v = page[c.key] -%}
+{%- assign vs = v | join: "" | strip -%}
+{%- if vs != "" %}
+<li class="chip">{% include icon.html name=c.icon %}<span class="chip-k">{{ c.label }}</span><span class="chip-v{% if c.mono %} mono{% endif %}">{{ v | join: " · " }}</span></li>
+{%- endif -%}
+{%- endfor -%}
+{%- endcapture -%}
+{%- assign chip_check = chip_items | strip -%}
+{%- if chip_check != "" %}
+<ul class="chips" aria-label="基本信息">
+{{ chip_items }}
+</ul>
+{%- endif %}
+</div>
+</div>
+</section>

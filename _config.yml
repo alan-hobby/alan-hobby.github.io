@@ -1,0 +1,60 @@
+# ------------------------------------------------------------
+# 网站基本设置
+# ------------------------------------------------------------
+title: Riveldell
+tagline: 我的小屋
+description: 我的兴趣爱好小屋，欢迎各位同好浏览。
+avatar: /images/crow.jpg
+lang: zh-CN
+
+url: "https://alan-hobby.github.io"
+baseurl: ""
+
+# ------------------------------------------------------------
+# 五个模块，每个模块对应一个文件夹
+# 往文件夹里放一个 .md 文件，就多一个条目。
+# ------------------------------------------------------------
+collections:
+  cars:
+    output: true
+    permalink: /cars/:name/
+  games:
+    output: true
+    permalink: /games/:name/
+  films:
+    output: true
+    permalink: /films/:name/
+  tvshows:
+    output: true
+    permalink: /tv/:name/
+  mystery:
+    output: true
+    permalink: /mystery/:name/
+
+defaults:
+  - scope: { path: "", type: cars }
+    values: { layout: entry }
+  - scope: { path: "", type: games }
+    values: { layout: entry }
+  - scope: { path: "", type: films }
+    values: { layout: entry }
+  - scope: { path: "", type: tvshows }
+    values: { layout: entry }
+  - scope: { path: "", type: mystery }
+    values: { layout: entry }
+
+# ------------------------------------------------------------
+# 以下一般不用改
+# ------------------------------------------------------------
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .bundle

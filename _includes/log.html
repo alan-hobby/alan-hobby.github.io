@@ -1,0 +1,16 @@
+{%- assign mod = include.mod -%}
+{%- assign has_log = false -%}
+{%- for e in page.log -%}{%- assign t = e.text | strip -%}{%- if t != "" -%}{%- assign has_log = true -%}{%- endif -%}{%- endfor -%}
+{%- if has_log %}
+<section class="card side-card" aria-labelledby="log-h">
+<h2 id="log-h">{{ mod.log_label }}</h2>
+<ol class="log">
+{%- for e in page.log -%}
+{%- assign t = e.text | strip -%}
+{%- if t != "" %}
+<li><span class="date">{% if e.date %}{{ e.date }}{% else %}—{% endif %}</span><span>{{ e.text }}</span></li>
+{%- endif -%}
+{%- endfor %}
+</ol>
+</section>
+{%- endif -%}

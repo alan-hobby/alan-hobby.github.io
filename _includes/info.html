@@ -1,0 +1,31 @@
+{%- assign mod = include.mod -%}
+{%- if page.specs %}
+<section class="card side-card" aria-labelledby="info-h">
+<h2 id="info-h">{{ mod.info_label }}</h2>
+{%- for group in page.specs %}
+<div class="kv-group">
+<h3>{{ group[0] }}</h3>
+<dl class="kv">
+{%- for row in group[1] -%}
+{%- assign rv = row[1] | join: "" | strip -%}
+{%- if rv != "" %}
+<dt>{{ row[0] }}</dt><dd>{{ row[1] | join: " · " }}</dd>
+{%- endif -%}
+{%- endfor %}
+</dl>
+</div>
+{%- endfor %}
+</section>
+{%- elsif page.info %}
+<section class="card side-card" aria-labelledby="info-h">
+<h2 id="info-h">{{ mod.info_label }}</h2>
+<dl class="kv">
+{%- for row in page.info -%}
+{%- assign rv = row[1] | join: "" | strip -%}
+{%- if rv != "" %}
+<dt>{{ row[0] }}</dt><dd>{{ row[1] | join: " · " }}</dd>
+{%- endif -%}
+{%- endfor %}
+</dl>
+</section>
+{%- endif -%}

@@ -1,0 +1,112 @@
+# 五个模块的显示设置。
+# 平时加条目不用动这个文件；想改筛选项、标题卡里显示哪些字段时再改。
+#
+# id          对应的文件夹（_cars、_games ...）
+# crumb       标题卡左上角“车模 / Ferrari”里第二段取哪个字段
+# group_by    左侧目录按哪个字段分组（这个字段都没填时，就不分组）
+# list_meta   目录每一行右侧显示哪个字段
+# thumb       模块首页卡片的缩略图比例：wide（4:3）/ cover（3:4）/ poster（2:3）
+# filters     左侧筛选。只有条目里真的填了这个字段，筛选按钮才会出现；
+#             写了 values 时按 values 的顺序排
+# chips       标题卡里那一排标签，字段为空就不显示
+
+- id: cars
+  name: 车模
+  unit: 台
+  url: /cars/
+  crumb: brand
+  group_by: brand
+  list_meta: scale
+  thumb: wide
+  info_label: 规格
+  log_label: 收藏日志
+  filters:
+    - { key: brand, label: 品牌 }
+    - { key: scale, label: 比例, mono: true }
+  chips:
+    - { key: scale, label: 比例, icon: ruler }
+    - { key: maker, label: 厂商, icon: factory }
+    - { key: material, label: 材质, icon: cube }
+    - { key: item_no, label: 货号, icon: hash, mono: true }
+    - { key: acquired, label: 入藏, icon: calendar }
+    - { key: source, label: 来源, icon: tag }
+
+- id: games
+  name: 游戏
+  unit: 款
+  url: /games/
+  crumb: genre
+  group_by: status
+  list_meta: year
+  thumb: cover
+  info_label: 信息
+  log_label: 游玩日志
+  filters:
+    - { key: status, label: 状态, values: [在玩, 已通关, 想玩] }
+    - { key: platform, label: 平台 }
+  chips:
+    - { key: developer, label: 开发, icon: code }
+    - { key: platform, label: 平台, icon: monitor }
+    - { key: hours, label: 时长, icon: clock }
+    - { key: finished, label: 通关, icon: flag }
+    - { key: rating, label: 评分, icon: star }
+
+- id: films
+  name: 电影
+  unit: 部
+  url: /films/
+  crumb: genre
+  group_by: status
+  list_meta: year
+  thumb: poster
+  info_label: 信息
+  log_label: 观影日志
+  filters:
+    - { key: status, label: 状态, values: [看过, 想看] }
+    - { key: decade, label: 年代, mono: true }   # 根据 year 自动算出 2010s 这样的年代
+  chips:
+    - { key: director, label: 导演, icon: clapper }
+    - { key: runtime, label: 片长, icon: clock }
+    - { key: watched, label: 观看, icon: calendar }
+    - { key: where, label: 在哪看, icon: monitor }
+    - { key: rating, label: 评分, icon: star }
+
+- id: tvshows
+  name: 电视剧
+  unit: 部
+  url: /tv/
+  crumb: series
+  group_by: series
+  list_meta: year
+  thumb: poster
+  info_label: 信息
+  log_label: 观看日志
+  filters:
+    - { key: status, label: 状态, values: [在看, 看完, 想看] }
+  chips:
+    - { key: creator, label: 主创, icon: clapper }
+    - { key: episodes, label: 集数, icon: stack }
+    - { key: watched, label: 看完, icon: calendar }
+    - { key: where, label: 在哪看, icon: monitor }
+    - { key: rating, label: 评分, icon: star }
+
+- id: mystery
+  name: 推理小说
+  unit: 本
+  url: /mystery/
+  crumb: school
+  group_by: author
+  list_meta: year
+  thumb: poster
+  info_label: 信息
+  log_label: 阅读日志
+  filters:
+    - { key: school, label: 流派 }
+    - { key: tags, label: 诡计 }
+  chips:
+    - { key: author, label: 作者, icon: pen }
+    - { key: original_title, label: 原名, icon: quote }
+    - { key: edition, label: 版本, icon: book }
+    - { key: finished, label: 读完, icon: calendar }
+    - { key: rating, label: 评分, icon: star }
+    - { key: series, label: 系列, icon: stack }

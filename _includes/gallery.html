@@ -1,0 +1,16 @@
+{%- assign img0 = page.images | first -%}
+<section class="card gallery" aria-label="图集">
+<figure class="gallery-main">
+<img id="gallery-main-img" src="{{ img0.src | relative_url }}" alt="{{ img0.caption | default: page.title }}">
+{%- if img0.caption %}
+<figcaption id="gallery-main-cap">{{ img0.caption }}</figcaption>
+{%- endif %}
+</figure>
+{%- if page.images.size > 1 %}
+<div class="thumbs">
+{%- for im in page.images %}
+<button type="button" class="thumb" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}" aria-label="查看：{{ im.caption | default: forloop.index | escape }}" data-src="{{ im.src | relative_url }}" data-caption="{{ im.caption | escape }}"><img src="{{ im.src | relative_url }}" alt="" loading="lazy"></button>
+{%- endfor %}
+</div>
+{%- endif %}
+</section>

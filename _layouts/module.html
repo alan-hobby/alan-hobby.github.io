@@ -1,0 +1,30 @@
+---
+layout: default
+---
+{%- assign mod = site.data.modules | where: "id", page.module | first -%}
+{%- assign mod_items = site[mod.id] | sort: "order", "last" -%}
+<div class="shell">
+{% include sidebar.html mod=mod %}
+<main class="main" id="main">
+<section class="card module-head">
+<h1>{{ mod.name }}</h1>
+<p class="mono muted">{{ mod_items.size }} {{ mod.unit }}</p>
+</section>
+{%- if mod_items.size == 0 %}
+<p class="card empty-note">还没有条目。</p>
+{%- else %}
+<div class="entry-grid entry-grid--{{ mod.thumb }}">
+{%- for it in mod_items -%}
+{%- if mod.thumb == "wide" -%}{%- assign img0 = it.images | first -%}{%- assign thumb = img0.src -%}{%- else -%}{%- assign thumb = it.cover -%}{%- endif %}
+<a class="entry-card" href="{{ it.url | relative_url }}" data-filterable{% include filter-attrs.html item=it mod=mod %}>
+<span class="entry-thumb">{% if thumb %}<img src="{{ thumb | relative_url }}" alt="" loading="lazy">{% endif %}</span>
+{%- if it.status %}<span class="entry-status">{{ it.status }}</span>{% endif %}
+<span class="entry-title">{{ it.title }}</span>
+{%- if it.subtitle %}<span class="entry-sub">{{ it.subtitle }}</span>{% endif %}
+</a>
+{%- endfor %}
+</div>
+<p class="card empty-note" hidden>没有符合筛选条件的条目。</p>
+{%- endif %}
+</main>
+</div>

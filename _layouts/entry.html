@@ -1,0 +1,31 @@
+---
+layout: default
+---
+{%- assign mod = site.data.modules | where: "id", page.collection | first -%}
+{%- assign body_text = content | strip -%}
+<div class="shell">
+{% include sidebar.html mod=mod %}
+<main class="main" id="main">
+{% include entry-head.html mod=mod %}
+{%- if page.images and page.images.size > 0 %}
+{% include gallery.html %}
+{%- endif %}
+<div class="cols">
+<article class="card prose">
+{%- if body_text == "" %}
+<p class="prose-empty">还没有写文字记录。</p>
+{%- else %}
+{{ content }}
+{%- endif %}
+</article>
+{%- capture side -%}{% include info.html mod=mod %}{% include log.html mod=mod %}{%- endcapture -%}
+{%- assign side_check = side | strip -%}
+{%- if side_check != "" %}
+<aside class="side">
+{{ side }}
+</aside>
+{%- endif %}
+</div>
+{% include pager.html mod=mod %}
+</main>
+</div>

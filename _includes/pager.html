@@ -1,0 +1,25 @@
+{%- assign mod = include.mod -%}
+{%- assign pg_list = site[mod.id] | sort: "order", "last" -%}
+{%- assign pg_prev = nil -%}
+{%- assign pg_next = nil -%}
+{%- for it in pg_list -%}
+{%- if it.url == page.url -%}
+{%- assign pg_pi = forloop.index0 | minus: 1 -%}
+{%- assign pg_ni = forloop.index0 | plus: 1 -%}
+{%- if pg_pi >= 0 -%}{%- assign pg_prev = pg_list[pg_pi] -%}{%- endif -%}
+{%- assign pg_next = pg_list[pg_ni] -%}
+{%- break -%}
+{%- endif -%}
+{%- endfor -%}
+{%- if pg_prev or pg_next %}
+<nav class="pager" aria-label="翻页">
+{%- if pg_prev %}
+<a class="prev" href="{{ pg_prev.url | relative_url }}"><span class="dir">← 上一{{ mod.unit }}</span><span class="name">{{ pg_prev.title }}</span></a>
+{%- else %}
+<span aria-hidden="true"></span>
+{%- endif %}
+{%- if pg_next %}
+<a class="next" href="{{ pg_next.url | relative_url }}"><span class="dir">下一{{ mod.unit }} →</span><span class="name">{{ pg_next.title }}</span></a>
+{%- endif %}
+</nav>
+{%- endif -%}

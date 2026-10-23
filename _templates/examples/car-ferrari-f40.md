@@ -1,0 +1,90 @@
+---
+title: Ferrari F40
+short_title: F40                # 左侧目录里显示的短名
+subtitle: 法拉利 F40 · 1987
+number:                         # 藏品编号，例如 "018"（记得加引号）
+status: 在藏                     # 在藏 / 想要 / 已出
+brand: Ferrari
+scale: "1:18"
+maker: Kyosho
+material: 合金压铸
+item_no: "08416"
+acquired:                       # 入藏日期，例如 "2024-05-12"
+source:                         # 渠道，例如 店铺名 / 二手
+
+# 图集：第一张是主图。把占位图换成你自己的照片，例如 /assets/img/cars/f40-front.jpg
+images:
+  - src: /assets/img/placeholder/car-side.svg
+    caption: 主图 · 前 45°
+  - src: /assets/img/placeholder/car-side.svg
+    caption: 正侧面
+  - src: /assets/img/placeholder/car-rear.svg
+    caption: 车尾 45°
+  - src: /assets/img/placeholder/engine.svg
+    caption: 发动机舱
+  - src: /assets/img/placeholder/interior.svg
+    caption: 内饰
+  - src: /assets/img/placeholder/wheel.svg
+    caption: 轮毂
+  - src: /assets/img/placeholder/box.svg
+    caption: 原厂盒
+
+# 右侧“规格”，留空的行不会显示
+specs:
+  原型车:
+    年份: 1987–1992
+    设计: Pininfarina
+    发动机: 2.9 L 双涡轮 V8
+    功率: 478 PS
+    极速: 324 km/h
+    产量: 约 1,300 台
+  模型:
+    厂商: Kyosho
+    比例: "1:18"
+    材质: 合金压铸
+    货号: "08416"
+    可开部件:
+
+likes:
+  - （写一句喜欢的地方）
+dislikes:
+  - （写一句遗憾的地方）
+
+# 右侧“收藏日志”，以后有新动作就往下加一行
+log:
+  - date:                       # 例如 "2024-05-12"
+    text: 入藏
+---
+
+## 原型车
+
+1987 年夏天，法拉利在马拉内罗发布了 F40——名字里的 40，指的是品牌成立四十周年。它也是恩佐·法拉利生前亲自批准的最后一款车。
+
+它几乎是一台能上路的赛车：2.9 升双涡轮 V8，478 马力，车身大量使用凯夫拉与碳纤维。车里没有地毯、没有音响，早期车的侧窗是推拉式的，车门从里面靠一根拉绳打开。
+
+官方极速 324 km/h，是第一台突破每小时 200 英里的量产车。1987 到 1992 年间共生产约 1,300 台。
+
+## 模型
+
+Kyosho 的 1:18 合金压铸版本。（这里写做工：哪些部件能打开，发动机舱和内饰的细节，漆面与透明件的质量，和原车相比还原得好、有妥协的地方。）
+
+<div class="figs">
+{% include figure.html src="/assets/img/placeholder/engine.svg" caption="发动机舱 · 后盖打开" %}
+{% include figure.html src="/assets/img/placeholder/interior.svg" caption="内饰 · 车门打开" %}
+</div>
+
+## 收藏笔记
+
+### 入手经过
+
+（什么时候、在哪里、为什么是这一台。）
+
+### 第一印象
+
+（开箱时最先注意到的地方。）
+
+### 展示方式
+
+（放在哪里，用什么展示盒，怎么防尘。）
+
+{% include likes.html %}

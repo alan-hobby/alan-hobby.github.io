@@ -1,0 +1,60 @@
+{%- assign mod = include.mod -%}
+{%- assign sb_items = site[mod.id] | sort: "order", "last" -%}
+<details class="sidebar card" open>
+<summary class="sidebar-summary"><span>{{ mod.name }}目录</span><span class="mono muted">{{ sb_items.size }} {{ mod.unit }}</span></summary>
+<div class="sidebar-body">
+<div class="sidebar-head">
+<h2>{{ mod.name }}</h2>
+<span class="mono muted">{{ sb_items.size }} {{ mod.unit }}</span>
+</div>
+{%- for f in mod.filters -%}
+{%- if f.key == "decade" -%}
+{%- assign dstr = "" -%}
+{%- for it in sb_items -%}{%- if it.year -%}{%- assign d = it.year | divided_by: 10 | times: 10 -%}{%- assign dstr = dstr | append: d | append: "s|" -%}{%- endif -%}{%- endfor -%}
+{%- assign present = dstr | split: "|" | uniq | sort | reverse -%}
+{%- else -%}
+{%- assign present = sb_items | map: f.key | join: "|" | split: "|" | uniq | sort -%}
+{%- endif -%}
+{%- if f.values -%}{%- assign candidates = f.values -%}{%- else -%}{%- assign candidates = present -%}{%- endif -%}
+{%- assign nvals = 0 -%}
+{%- for v in candidates -%}{%- if v != "" and present contains v -%}{%- assign nvals = nvals | plus: 1 -%}{%- endif -%}{%- endfor -%}
+{%- if nvals > 0 %}
+<div class="filter" data-filter-key="{{ f.key }}">
+<p class="filter-label">{{ f.label }}</p>
+<div class="filter-chips">
+<button type="button" class="fbtn" aria-pressed="true" data-value="">全部</button>
+{%- for v in candidates -%}{%- if v != "" and present contains v %}
+<button type="button" class="fbtn{% if f.mono %} mono{% endif %}" aria-pressed="false" data-value="{{ v | escape }}">{{ v }}</button>
+{%- endif -%}{%- endfor %}
+</div>
+</div>
+{%- endif -%}
+{%- endfor %}
+<nav class="tree" aria-label="{{ mod.name }}列表">
+{%- if sb_items.size == 0 %}
+<p class="tree-none">还没有条目</p>
+{%- else -%}
+{%- assign groups = sb_items | group_by: mod.group_by -%}
+{%- assign single = false -%}{%- if groups.size == 1 -%}{%- assign single = true -%}{%- endif -%}
+{%- if mod.group_order -%}
+{%- for gname in mod.group_order -%}
+{%- assign g = groups | where: "name", gname | first -%}
+{%- if g %}
+{% include tree-group.html g=g mod=mod single=single %}
+{%- endif -%}
+{%- endfor -%}
+{%- for g in groups -%}
+{%- unless mod.group_order contains g.name %}
+{% include tree-group.html g=g mod=mod single=single %}
+{%- endunless -%}
+{%- endfor -%}
+{%- else -%}
+{%- for g in groups %}
+{% include tree-group.html g=g mod=mod single=single %}
+{%- endfor -%}
+{%- endif -%}
+{%- endif %}
+<p class="tree-empty" hidden>没有符合条件的条目</p>
+</nav>
+</div>
+</details>
