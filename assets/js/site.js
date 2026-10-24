@@ -101,13 +101,12 @@
     });
   });
 
-  // ---------- 图集：张数不限，左右翻 ----------
+  // ---------- 图集：张数不限，左右翻；一页里可以有好几个，各翻各的 ----------
   // 点缩略图、点大图两侧的箭头、键盘左右键、手机上左右滑动，都能换图
-  var gallery = document.querySelector("[data-gallery]");
-  if (gallery) {
-    var mainImg = document.getElementById("gallery-main-img");
-    var mainCap = document.getElementById("gallery-main-cap");
-    var counter = document.getElementById("gallery-count");
+  document.querySelectorAll("[data-gallery]").forEach(function (gallery) {
+    var mainImg = gallery.querySelector(".gal-img");
+    var mainCap = gallery.querySelector(".gal-cap");
+    var counter = gallery.querySelector(".gal-count");
     var strip = gallery.querySelector(".thumbs");
     var thumbs = Array.prototype.slice.call(gallery.querySelectorAll(".thumb"));
     var cur = 0;
@@ -169,7 +168,7 @@
         x0 = null;
       });
     }
-  }
+  });
 
   // ---------- 搜索 ----------
   var input = document.getElementById("site-search");

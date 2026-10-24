@@ -21,8 +21,11 @@ layout: default
 {%- assign mc_dir = it.photos | append: "/" | replace: "//", "/" -%}
 {%- assign mc_files = site.static_files | where_exp: "f", "f.path contains mc_dir" | sort: "path" -%}
 {%- for f in mc_files -%}
+{%- assign mc_rest = f.path | remove_first: mc_dir -%}
+{%- unless mc_rest contains "/" -%}
 {%- assign mc_ext = f.extname | downcase -%}
 {%- if mc_ext == ".jpg" or mc_ext == ".jpeg" or mc_ext == ".png" or mc_ext == ".webp" or mc_ext == ".gif" or mc_ext == ".avif" -%}{%- assign thumb = f.path -%}{%- break -%}{%- endif -%}
+{%- endunless -%}
 {%- endfor -%}
 {%- endif -%}
 {%- unless thumb -%}{%- assign img0 = it.images | first -%}{%- assign thumb = img0.src -%}{%- endunless -%}

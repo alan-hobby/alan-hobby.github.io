@@ -274,6 +274,7 @@ img { max-width: 100%; display: block; }
 
 /* ---------- 图集：张数不限，左右翻 ---------- */
 .gallery { padding: 16px; display: flex; flex-direction: column; gap: 12px; }
+.gallery--inline { margin: 20px 0; padding: 0; gap: 10px; }
 .gallery-main { margin: 0; position: relative; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 6px; background: var(--placeholder); }
 .gallery-main img { width: 100%; height: 100%; object-fit: contain; }
 .gallery-main figcaption {
@@ -340,6 +341,9 @@ img { max-width: 100%; display: block; }
 .prose .figs { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 12px; margin: 16px 0; }
 .prose .figs figure { margin: 0; max-width: none; }
 .prose hr { border: 0; border-top: 1px solid var(--line-soft); margin: 24px 0; }
+/* 正文里的图集：别被上面通用的 figure 样式影响 */
+.prose .gallery-main { margin: 0; max-width: none; display: block; }
+.prose .gallery-main figcaption { font-size: 12px; color: var(--caption-fg); }
 
 .pros-cons { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 12px; margin: 16px 0; }
 .pc-box { padding: 16px 20px; border-radius: 8px; background: var(--chip); }

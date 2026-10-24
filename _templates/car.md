@@ -51,10 +51,7 @@ log:                             # 收藏日志，以后有新动作就往下加
 
 这一段写模型本身。
 
-<div class="figs">
-{% include figure.html src="/images/cars/文件名.jpg" caption="图片说明" %}
-{% include figure.html src="/images/cars/文件名.jpg" caption="图片说明" %}
-</div>
+{% include gallery.html photos="/images/cars/文件夹名/细节/" %}
 
 ## 收藏笔记
 
