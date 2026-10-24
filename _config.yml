@@ -16,6 +16,8 @@ baseurl: ""
 # 往文件夹里放一个 .md 文件，就多一个条目。
 # ------------------------------------------------------------
 collections:
+  prototypes:                      # 原型车介绍：同一款车的不同比例共用一份，不单独生成网页
+    output: false
   cars:
     output: true
     permalink: /cars/:name/

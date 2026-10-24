@@ -3,6 +3,41 @@ layout: default
 ---
 {%- assign mod = site.data.modules | where: "id", page.collection | first -%}
 {%- assign body_text = content | strip -%}
+{%- comment -%}
+  同一款车的不同比例共用一份“原型车”介绍：条目里写 car: 代号，
+  就会读取 _prototypes/代号.md，显示在正文最前面，规格放进右侧“原型车”一栏。
+{%- endcomment -%}
+{%- assign proto = nil -%}
+{%- assign proto_html = "" -%}
+{%- if page.car and page.car != "" -%}
+{%- assign proto_path = "_prototypes/" | append: page.car | append: ".md" -%}
+{%- assign proto = site.prototypes | where: "relative_path", proto_path | first -%}
+{%- if proto -%}
+{%- assign proto_raw = proto.content | strip -%}
+{%- assign proto_first = proto_raw | slice: 0 -%}
+{%- if proto_first == "<" -%}{%- assign proto_html = proto_raw -%}{%- else -%}{%- assign proto_html = proto_raw | markdownify -%}{%- endif -%}
+{%- endif -%}
+{%- endif -%}
+{%- comment -%}
+  合影：mod.group_photos 文件夹里，文件名带有“代号-比例”（例如 250gto-18）的照片，
+  会出现在这台车页面的“合影”图集里。文件名里各台车用下划线隔开。
+{%- endcomment -%}
+{%- assign gp_list = "" -%}
+{%- if page.car and page.car != "" and page.scale and mod.group_photos -%}
+{%- assign gp_code = page.scale | split: ":" | last | prepend: "-" | prepend: page.car | downcase -%}
+{%- assign gp_dir = mod.group_photos | append: "/" | replace: "//", "/" -%}
+{%- assign gp_files = site.static_files | where_exp: "f", "f.path contains gp_dir" | sort: "path" -%}
+{%- for f in gp_files -%}
+{%- assign gp_rest = f.path | remove_first: gp_dir -%}
+{%- unless gp_rest contains "/" -%}
+{%- assign gp_ext = f.extname | downcase -%}
+{%- if gp_ext == ".jpg" or gp_ext == ".jpeg" or gp_ext == ".png" or gp_ext == ".webp" or gp_ext == ".gif" or gp_ext == ".avif" -%}
+{%- assign gp_tokens = gp_rest | downcase | replace: ".", "_" | split: "_" -%}
+{%- if gp_tokens contains gp_code -%}{%- assign gp_list = gp_list | append: f.path | append: "|" -%}{%- endif -%}
+{%- endif -%}
+{%- endunless -%}
+{%- endfor -%}
+{%- endif -%}
 <div class="shell">
 {% include sidebar.html mod=mod %}
 <main class="main" id="main">
@@ -12,13 +47,21 @@ layout: default
 {%- endif %}
 <div class="cols">
 <article class="card prose">
-{%- if body_text == "" %}
-<p class="prose-empty">还没有写文字记录。</p>
-{%- else %}
+{%- if proto_html != "" %}
+<h2>原型车</h2>
+{{ proto_html }}
+{%- endif %}
+{%- if body_text != "" %}
 {{ content }}
+{%- elsif proto_html == "" and gp_list == "" %}
+<p class="prose-empty">还没有写文字记录。</p>
+{%- endif %}
+{%- if gp_list != "" %}
+<h2>合影</h2>
+{% include gallery.html list=gp_list %}
 {%- endif %}
 </article>
-{%- capture side -%}{% include info.html mod=mod %}{% include log.html mod=mod %}{%- endcapture -%}
+{%- capture side -%}{% include info.html mod=mod proto=proto %}{% include log.html mod=mod %}{%- endcapture -%}
 {%- assign side_check = side | strip -%}
 {%- if side_check != "" %}
 <aside class="side">

@@ -7,6 +7,8 @@
 # list_meta   目录每一行右侧显示哪个字段
 # thumb       模块首页卡片的缩略图比例：wide（4:3）/ cover（3:4）/ poster（2:3）
 # card_sub    模块首页卡片里，标题下面那一行小字取哪个字段（不写就用 subtitle）
+# card_meta   卡片最下面再加一行小字，例如车模的比例
+# group_photos  合影文件夹（车模用）：文件名里带“代号-比例”的照片，会出现在那台车的“合影”里
 # filters     左侧筛选。只有条目里真的填了这个字段，筛选按钮才会出现；
 #             写了 values 时按 values 的顺序排
 # chips       标题卡里那一排标签，字段为空就不显示。
@@ -21,6 +23,8 @@
   group_by: brand
   list_meta: scale
   thumb: wide
+  card_meta: scale
+  group_photos: /images/cars/合影/
   info_label: 规格
   log_label: 收藏日志
   filters:

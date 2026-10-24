@@ -1,7 +1,24 @@
 {%- assign mod = include.mod -%}
-{%- if page.specs %}
+{%- assign info_proto_specs = nil -%}
+{%- if include.proto and include.proto.specs -%}
+{%- unless page.specs and page.specs["原型车"] -%}{%- assign info_proto_specs = include.proto.specs -%}{%- endunless -%}
+{%- endif -%}
+{%- if page.specs or info_proto_specs %}
 <section class="card side-card" aria-labelledby="info-h">
 <h2 id="info-h">{{ mod.info_label }}</h2>
+{%- if info_proto_specs %}
+<div class="kv-group">
+<h3>原型车</h3>
+<dl class="kv">
+{%- for row in info_proto_specs -%}
+{%- assign rv = row[1] | join: "" | strip -%}
+{%- if rv != "" %}
+<dt>{{ row[0] }}</dt><dd>{{ row[1] | join: " · " }}</dd>
+{%- endif -%}
+{%- endfor %}
+</dl>
+</div>
+{%- endif %}
 {%- for group in page.specs %}
 <div class="kv-group">
 <h3>{{ group[0] }}</h3>

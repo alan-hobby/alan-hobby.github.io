@@ -264,6 +264,15 @@ img { max-width: 100%; display: block; }
 .chip-k { flex: none; color: var(--muted); }
 .chip-v { min-width: 0; overflow-wrap: anywhere; }
 .chip-v.mono { font-family: var(--font-mono); font-size: 13px; }
+/* 同款其他比例 */
+.siblings { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; margin: 0; font-size: 14px; line-height: 1.4; }
+.siblings-k { margin-right: 4px; color: var(--muted); }
+.siblings a {
+  display: inline-flex; align-items: center; min-height: 32px; padding: 0 12px;
+  border: 1px solid var(--line); border-radius: 999px; color: var(--ink); text-decoration: none;
+  font-family: var(--font-mono); font-size: 13px;
+}
+.siblings a:hover { border-color: var(--line-hover); background: var(--chip); }
 .chip { max-width: 100%; }
 .chip--link { padding: 0; }
 .chip--link a {
@@ -421,6 +430,7 @@ img { max-width: 100%; display: block; }
 .entry-status { font-family: var(--font-mono); font-size: 12px; color: var(--accent-ink); }
 .entry-title { font-size: 15px; font-weight: 700; line-height: 1.4; }
 .entry-sub { font-size: 13px; line-height: 1.5; color: var(--muted); }
+.entry-meta { font-family: var(--font-mono); font-size: 12px; line-height: 1.5; color: var(--muted); }
 .empty-note { margin: 0; padding: 24px; text-align: center; color: var(--muted); }
 
 /* ---------- 网站首页：一张铺满屏幕的大图 ----------

@@ -6,7 +6,19 @@
   只显示这个文件夹里的图片（jpg / png / webp / gif），不含子文件夹，按文件名排序。
   文件夹里还没有图片时，显示一张“还没有照片”。
 {%- endcomment -%}
-{%- if include.photos -%}
+{%- assign gl_srcs = "" -%}
+{%- assign gl_caps = "" -%}
+{%- if include.list -%}
+{%- comment -%} 直接给一串图片路径（用 | 隔开），例如“合影”图集 {%- endcomment -%}
+{%- assign gl_photos = nil -%}
+{%- assign gl_list = nil -%}
+{%- assign gl_inline = true -%}
+{%- assign gl_items = include.list | split: "|" -%}
+{%- for s in gl_items -%}
+{%- assign gl_srcs = gl_srcs | append: s | append: "|" -%}
+{%- assign gl_caps = gl_caps | append: " |" -%}
+{%- endfor -%}
+{%- elsif include.photos -%}
 {%- assign gl_photos = include.photos -%}
 {%- assign gl_list = nil -%}
 {%- assign gl_inline = true -%}
@@ -15,8 +27,6 @@
 {%- assign gl_list = page.images -%}
 {%- assign gl_inline = false -%}
 {%- endif -%}
-{%- assign gl_srcs = "" -%}
-{%- assign gl_caps = "" -%}
 {%- if gl_photos and gl_photos != "" -%}
 {%- assign gl_dir = gl_photos | append: "/" | replace: "//", "/" -%}
 {%- assign gl_files = site.static_files | where_exp: "f", "f.path contains gl_dir" | sort: "path" -%}

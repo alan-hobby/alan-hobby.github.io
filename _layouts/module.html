@@ -37,6 +37,7 @@ layout: default
 <span class="entry-title">{{ it.title }}</span>
 {%- if mod.card_sub -%}{%- assign card_sub = it[mod.card_sub] | join: " · " -%}{%- else -%}{%- assign card_sub = it.subtitle -%}{%- endif -%}
 {%- if card_sub and card_sub != "" %}<span class="entry-sub">{{ card_sub }}</span>{% endif %}
+{%- if mod.card_meta and it[mod.card_meta] %}<span class="entry-meta">{{ it[mod.card_meta] }}</span>{% endif %}
 </a>
 {%- endfor %}
 </div>

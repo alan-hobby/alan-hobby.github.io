@@ -47,6 +47,16 @@
 {{ chip_items }}
 </ul>
 {%- endif %}
+{%- if page.car and page.car != "" -%}
+{%- assign sib_all = site[mod.id] | where: "car", page.car | sort: "order", "last" -%}
+{%- capture sib_links -%}
+{%- for s in sib_all -%}{%- if s.url != page.url %}<a href="{{ s.url | relative_url }}">{{ s.scale }}{% if s.maker and s.maker != "" %} · {{ s.maker }}{% endif %}</a>{% endif -%}{%- endfor -%}
+{%- endcapture -%}
+{%- assign sib_check = sib_links | strip -%}
+{%- if sib_check != "" %}
+<p class="siblings"><span class="siblings-k">同款其他比例</span>{{ sib_links }}</p>
+{%- endif -%}
+{%- endif %}
 </div>
 </div>
 </section>
