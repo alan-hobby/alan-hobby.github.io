@@ -9,7 +9,7 @@ maker: GMP
 
 # 图集：照片直接放进下面这个文件夹，放几张就显示几张，不限张数，可以左右翻。
 # 按文件名排序，不用一张张写进这个文件。文件夹里还没有照片时，只显示一张“还没有照片”的占位图。
-photos: /images/cars/ferrari-330p4/
+photos: /images/cars/ferrari-330p4_18/
 
 # 右侧“规格”，留空的行不会显示
 specs:
