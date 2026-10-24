@@ -63,8 +63,7 @@ log:
 Kyosho 的 1:18 合金压铸版本。[这里写做工：哪些部件能打开，发动机舱和内饰的细节，漆面与透明件的质量，和原车相比的取舍。]
 
 <div class="figs">
-{% include figure.html src="/assets/img/placeholder/engine.svg" caption="发动机舱 · 后盖打开" %}
-{% include figure.html src="/assets/img/placeholder/interior.svg" caption="内饰 · 车门打开" %}
+{% include gallery.html photos="/images/cars/ferrari-250gto_18/another/" %}
 </div>
 
 ## 收藏笔记
